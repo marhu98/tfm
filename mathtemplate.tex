@@ -1,0 +1,112 @@
+\documentclass[10pt,twoneside]{book}
+%\documentclass[10pt,oneside]{book}
+%\documentclass[14pt]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\pagestyle{headings}
+
+\renewcommand\bibname{Bibiliografía}
+
+\usepackage{titlesec}
+
+\usepackage[spanish]{babel}
+ 
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Huge}
+
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{bbm}
+
+\usepackage[margin=1in,footskip=.25in]{geometry}
+%\usepackage[margin=1in]{geometry}
+\usepackage{geometry}
+\usepackage{mathtools}    
+\usepackage[latin9]{inputenc}  	
+\usepackage[bottom]{footmisc}	% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		
+\usepackage{graphicx}														
+\usepackage{amssymb}
+\usepackage{ragged2e}
+\newcommand{\kfour}{\mathbb{K}^4}
+\newcommand{\ktwo}{\mathbb{K}^2}
+\newcommand{\pthree}{\mathbb{P}^3}
+\newcommand{\afin}{\mathbb{A}}
+\newcommand{\ov}{\overrightarrow}
+
+
+\usepackage{tikz-cd}
+
+
+\usepackage{faktor}
+
+
+\usepackage{mathtools}
+
+
+%\usepackage[spanish]{babel} % espaÃ±ol
+%\usepackage[utf8]{inputenc} % acentos sin codigo
+%\usepackage{graphicx} % graficos
+%\usepackage{amssymb} 
+%\usepackage{amsmath,amsthm} 
+%\usepackage{amsthm} 
+
+%\usepackage{hyperref}
+%\usepackage{mathtools}
+\usepackage{mathrsfs} % Letras caligráficas
+\usepackage{bm}
+
+
+
+\usepackage{xcolor}
+
+\newcommand{\mcm}{\qopname \relax o{mcm}}
+
+\newcommand{\massey}[3]{\langle[ {#1} ],[ {#2} ],[ {#3} ]\rangle}
+\newcommand{\module}[1]{\vert #1 \lvert }
+\newcommand{\dotprod}[2]{\langle #1,#2 \rangle}
+\newcommand{\mbot}{{(\bot)}}
+%\newcommand{\isoequal}{\stackrel{\text{iso}}{=}}
+\newcommand{\isoequal}{\simeq}
+\newcommand{\difequal}{\stackrel{\text{dif}}{=}}
+\newcommand{\defequal}{\stackrel{\text{def}}{=}}
+\newcommand{\isoapprox}{\stackrel{\text{iso}}{\displaystyle\approx}}
+\newcommand{\Cech}{\v{C}ech}
+\newcommand{\difpartial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\difantipartial}[2]{\frac{\partial #1}{\overline{\partial} #2}}
+\newcommand{\antipartial}{{\overline{\partial }}}
+
+\newcommand{\comilla}{{}"{}}
+
+
+
+\usepackage{amsthm}
+
+\newcounter{fakecnt}[section]
+\def\thefakecnt{\arabic{section}}
+
+\newtheorem{theorem}{Teorema}
+\newtheorem*{conjecture}{Conjetura}
+\newtheorem*{remark}{Nota}
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{observation}{Observación}[chapter]
+\newtheorem{example}{Ejemplo}[chapter]
+\theoremstyle{definition}
+	\newtheorem{definition}{Definición}[chapter]
+	
+
+\newenvironment{hproof}{%
+  \renewcommand{\proofname}{Esquema de demostración}\proof}{\endproof}
+
+
+\renewcommand\qedsymbol{$QED$}
+
+
+%\footskip = 0pt
+
+\date{}
+\begin{document}
+%\autor{Mario Marhuenda Beltrán}
+
+\end{document}
