@@ -85,19 +85,19 @@
 \newcounter{fakecnt}[section]
 \def\thefakecnt{\arabic{section}}
 
-\newtheorem{theorem}{Teorema}
-\newtheorem*{conjecture}{Conjetura}
-\newtheorem*{remark}{Nota}
-\newtheorem{corollary}{Corolario}[theorem]
-\newtheorem{lemma}{Lema}[chapter]
-\newtheorem{observation}{Observación}[chapter]
-\newtheorem{example}{Ejemplo}[chapter]
+\newtheorem{theorem}{Theorem}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{remark}{Remark}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{observation}{Observation}[chapter]
+\newtheorem{example}{Example}[chapter]
 \theoremstyle{definition}
-	\newtheorem{definition}{Definición}[chapter]
+	\newtheorem{definition}{Definition}[chapter]
 	
 
 \newenvironment{hproof}{%
-  \renewcommand{\proofname}{Esquema de demostración}\proof}{\endproof}
+  \renewcommand{\proofname}{Esquema de demostraci�n}\proof}{\endproof}
 
 
 \renewcommand\qedsymbol{$QED$}
@@ -108,5 +108,7 @@
 \date{}
 \begin{document}
 %\autor{Mario Marhuenda Beltrán}
+
+\input{chapters/chapter1.tex}
 
 \end{document}
