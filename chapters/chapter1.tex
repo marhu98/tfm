@@ -4,9 +4,32 @@
 
 \section{Ordered complex and canonical form}
 
-\begin{definition}[$\R$-Filtered complex]
 
+\begin{definition}[$\R$-Filtered complex]
+Let $\{C_k\}_{k=0}^{\infty}$ be a complex. 
+A $\R$-filtration on $\{C_k\}_{k=0}^{\infty}$ 
+is an increasing sequence of real numbers, $\{r_i\}_{i=0}^n$
+so that for each $r_i$ there as associated $F_{\leq r_i}C_k\subset C_k$ for every $k$
+that satisfies:
+
+$$
+\{0\}\subset
+F_{\leq r_0}C_k
+\subset
+F_{\leq r_k}C_k
+\subset
+\cdots
+\subset
+F_{\leq r_n}C_k
+=
+C_k
+$$
 \end{definition}
+
+As we well see, there are a lot of natural circumstances on which a filtration might arise. For example, 
+the singular chain comples of a CW-complex is naturally filtered by its skeleton.
+
+There are more structures we can put on a complex:
 
 \begin{definition}[Complex with ordered generators]
 
@@ -165,19 +188,36 @@ $e_m^{j-1}\neq \partial a_k^j, \forall k\neq i$
  
 \end{prof}
 
-\begin{definition}[Cech Complex]
+\section{Some examples of complexes}
 
-Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define:
+\begin{definition}[{\Cech} Complex]
+
+Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the \Cech
+complex of level $\epsilon$ as the following simplicial set:
+
+%$$
+%X_d 
+%=
+%\{
+%x\in\R^n:
+%d(x,X)\leq d
+%\} 
+%$$
 
 $$
-X_d 
+\tilde{C}_\epsilon(X)
 =
 \{
-x\in\R^n:
-d(x,X)\leq d
-\} 
+\sigma \subset X :
+\bigcap_{y\in\sigma} B(y,\epsilon)\neq \emptyset
+\}
 $$
+
 \end{definition}
+
+However, in practice the {\Cech} complex can get too large to handle, notice that when $\epsilon$ is large enough,
+the {\Cech} complex equals the power set of $X$. One solution to this is using the 
+Vietories-Rips complex.
 
 \begin{definition}[Vietoris-Rips Complex]
 
@@ -185,6 +225,6 @@ $$
 
 \section{Motivation}
 
-\chapter{Canonical form=Persistence diagrams}
+%\chapter{Canonical form=Persistence diagrams}
 
 
