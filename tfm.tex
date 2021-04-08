@@ -92,12 +92,17 @@
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{observation}{Observation}[chapter]
 \newtheorem{example}{Example}[chapter]
+%\renewcommand{proof}{\prof}
 \theoremstyle{definition}
 	\newtheorem{definition}{Definition}[chapter]
 	
 
 \newenvironment{hproof}{%
   \renewcommand{\proofname}{Esquema de demostración}\proof}{\endproof}
+  
+ \newenvironment{prof}{%
+  \renewcommand{\proofname}{Proof}\proof}{\endproof}
+
 
 
 \renewcommand\qedsymbol{$QED$}
