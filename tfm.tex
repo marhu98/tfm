@@ -3,11 +3,14 @@
 %\documentclass[14pt]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
 \pagestyle{headings}
 
-\renewcommand\bibname{Bibiliografía}
+\usepackage{natbib}
+
+%\renewcommand\bibname{Bibliografía}
+%\renewcommand\bibname{Bibliografy}
 
 \usepackage{titlesec}
 
-\usepackage[spanish]{babel}
+%\usepackage[spanish]{babel}
  
 \titleformat{\chapter}[display]
   {\normalfont\bfseries}{}{0pt}{\Huge}
@@ -79,6 +82,10 @@
 \newcommand{\comilla}{{}"{}}
 
 
+\newcommand{\e}[2]{e_{#1}^{(#2)}}
+
+\newcommand{\f}[2]{f_{#1}^{(#2)}}
+
 
 \usepackage{amsthm}
 
@@ -86,6 +93,7 @@
 \def\thefakecnt{\arabic{section}}
 
 \newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
 \newtheorem*{conjecture}{Conjecture}
 \newtheorem*{remark}{Remark}
 \newtheorem{corollary}{Corollary}[theorem]
@@ -110,10 +118,18 @@
 
 %\footskip = 0pt
 
+\graphicspath{ {imgs/} }
+
 \date{}
 \begin{document}
 %\autor{Mario Marhuenda Beltrán}
 
+%\tableofcontents
+
 \input{chapters/chapter1.tex}
+
+\bibliographystyle{plain}
+
+\bibliography{tfm}
 
 \end{document}

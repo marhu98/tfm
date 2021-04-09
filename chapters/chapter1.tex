@@ -52,6 +52,7 @@ is either $0$ or another generator.
 \end{definition}
 
 \begin{remark}
+\label{canonicalformsplit}
 The canonical form is equivalent to saying that we can find a basis $S$ 
 of $\{C_k\}_{k=0}^{\infty}$ so that $S$
 can be separated into: 
@@ -73,7 +74,8 @@ $$
 \end{remark}
 
 \begin{theorem}
-Every chain complex with ordered generators can be reduced to 
+\cite{bar1994}
+Every filtered chain complex can be reduced to 
 one in canonical form by an upper-triangular change of basis.
 
 Furthermore, the canonical form is unique.
@@ -82,40 +84,40 @@ Furthermore, the canonical form is unique.
 \begin{prof}
 First we prove that we prove the first statement. 
 Let ${C_k}_{k=0}^\infty$ 
-and a basis $\{e_i^j\}_{i,j}$ 
-with $e_i^j\in C_i,\forall i$.
+and a basis $\{\e{i}{j}\}_{i,j}$ 
+with $\e{i}{j}\in C_i,\forall i$.
 
 Let $i+1$ be the smallest natural so that $C_{\leq n}$
 is not in canonical form. Obviously, $i+1>0$, since $\partial | _{C_0}=0$.
 
-Let $e_{i+1}^j$ be the generator with smallest $j$ so that $\partial e^i_j$
+Let $\e{i+1}{j}$ be the generator with smallest $j$ so that $\partial e^i_j$
 is neither 0 nor another generator. Clearly, $i+j>0$, since $\partial | _{C_0}=0$.
 
-Let $\partial e_{i+1}^j=\sum \alpha_k e_k^{j-1}$, then on the LHS, we have terms which are exact (that is, on $S_{\text{death}}$),
-and those which are not. We move all the exact terms in the LHS of the form $e_{k}^{j-1}=\partial e_{q}^j$, with $q\leq i$.
+Let $\partial \e{i+1}{j}=\sum \alpha_k \e{k}{j-1}$, then on the LHS, we have terms which are exact (that is, on $S_{\text{death}}$),
+and those which are not. We move all the exact terms in the LHS of the form $\e{k}{j-1}=\partial \e{q}{j}$, with $q\leq i$.
 $$
 \partial\left(
-e_{i+1}^j
+\e{i+1}{j}
 -
 \sum_{q=1}^i
 e^j_q\alpha_{k(q)}
 \right)
 =
-\sum \beta_k e_k^{j-1}
+\sum \beta_k \e{k}{j-1}
 $$
 
 Here we separate two cases,
 if the LHS is $0$, then we simply define 
 $$
-f^j_{i+1}=
-e_{i+1}^j
+\f{j}{i+1}=
+\e{i+1}{j}
 -
 \sum_{q=1}^i
-e^j_q\alpha_{k(q)}
+\e{j}{q}\alpha_{k(q)}
 $$
 
-In this case, clearly the linear map $A e_{i+1}^j=f_{i+1}^j$ and the identity on the rest 
-has an upper triangular matrix and $\partial f^j_{i+1}=0$.
+In this case, clearly the linear map $A \e{i+1}{j}=\f{i+1}{j}$ and the identity on the rest 
+has an upper triangular matrix and $\partial f{i+1}{j}=0$.
 
 In the case we can find $\beta_{k_0}\neq 0 $ we pick such $k_0$ so it is maximal. Then:
 
@@ -123,72 +125,183 @@ $$
 \partial
 \frac{1}{\beta_{k_0}}
 \left(
-e_{i+1}^j
+\e{i+1}{j}
 -
 \sum_{q=1}^i
 e^j_q\alpha_{k(q)}
 \right)
 =
-e_{k_0}^{j-1}
+\e{k_0}{j-1}
 +
-\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} e_k^{j-1}
+\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} \e{k}{j-1}
 $$
 
 In this case, we define:
 
 $$
-f_{i+1}^j
+\f{i+1}{j}
 =
 \frac{1}{\beta_{k_0}}
 \left(
-e_{i+1}^j
+\e{i+1}{j}
 -
 \sum_{q=1}^i
-e^j_q\alpha_{k(q)}
+\e{q}{j}\alpha_{k(q)}
 \right);
 \quad
-f_{k_{0}}^{j-1}
+\f{k_{0}}{j-1}
 =
-e_{k_0}^{j-1}
+\e{k_0}{j-1}
 +
-\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} e_k^{j-1}
+\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} \e{k}{j-1}
 $$
 
-Then clearly $\partial f^j_{i+1}=f_{k_0}^{j-1}$ and the obvious change of variable has the desired form.
+Then clearly $\partial \f{i+1}{j}=\f{k_0}{j-1}$ and the obvious change of variable has the desired form.
 This violates our minimality condition, therefore the first statement is proved.
 
 Now we prove the uniqueness part: Suppose we have two bases in canonical form
-$\{e_i^j\}$ and $\{f_i^j\}$. Then choose $i$ and $j$ so that for all $p<j$ and any $m$
-or $p=j$ and $m<i$ then $e_i^j=f_i^j$. 
+$\{\e{i}{j}\}$ and $\{\f{i}{j}\}$. Then choose $i$ and $j$ so that for all $p<j$ and any $m$
+or $p=j$ and $m<i$ then $\e{i}{j}=\f{i}{j}$. 
 
 We can find coefficients $\alpha_k$ and $\beta_k$ so that:
 
 $$
-f_i^j
+\f{i}{j}
 =
-\sum_{k=1}^i \alpha_k e_k^j,
+\sum_{k=1}^i \alpha_k \e{k}{j},
 \quad
-\partial f_i^j = f_l^{j-1}
+\partial \f{i}{j} = \f{l}{j-1}
 =
-\sum_{n=1}^l \beta_k e_k^j
+\sum_{n=1}^l \beta_k \e{k}{j}
 $$
 
 Hence 
 $$
-\partial e_i^j=
+\partial \e{i}{j}=
 \sum_{n=1}^l
-e_n^{j-1}\frac{\beta_n}{\alpha_i}
+\e{n}{j-1}\frac{\beta_n}{\alpha_i}
 -
 \sum_{k=1}^l
-\partial e_k^{j-1}\frac{\alpha_k}{\alpha_i}
+\partial \e{k}{j-1}\frac{\alpha_k}{\alpha_i}
 $$
 
-This proves the uniqueness of the canonical form since: $\partial e_i^j=e_m^{j-1},m>l$ and 
-$e_m^{j-1}\neq \partial a_k^j, \forall k\neq i$
+This proves the uniqueness of the canonical form since: $\partial \e{i}{j}=\e{m}{j-1},m>l$ and 
+$\e{m}{j-1}\neq \partial a_k^j, \forall k\neq i$
  
 \end{prof}
 
-\section{Some examples of complexes}
+
+\begin{corollary}{Category of filtered complexes is semi-simple}
+Any filtered complex, (or one with an ordered basis) can be expressed as a direct sum of 
+1 dimensional complexes with trivial differential and 2 dimensional complexes with trivial homology.
+\end{corollary}
+
+\begin{prof}
+Because any complex can we brought to canonical form, we can find a basis of the complex in the form of Remark \ref{canonicalformsplit}.
+Then $\text{Span}(S_H)$ splits as a sum of 1 dimensional complexes with trivial differential, since the differential is trivial on $S_H$.
+Similarly, the birth and death pairs splits into 2 dimensional complexes with one generator killing the other in homology.
+
+\end{prof}
+
+\section{Representations of the canonical form}
+
+\begin{definition}[Persistence diagrams]
+We call a persistence diagram to a finite family on half lines, indexed by $0,1,...$
+so that there is a discrete collection of points on each line and there are segments connecting points
+on a line of index $i$ to a line of index $i-1$.
+
+Furthermore, this segments always connect point of higher value with points of lower value.
+\end{definition}
+
+We clarify this definition with an example:
+
+\begin{example}
+The diagram below is a persistence diagram, notice that we can associate a natural 
+complex in canonical form in the following manner:
+
+\begin{enumerate}
+
+
+\item To a line of index $i$ we assign
+it the complex $C_k$.
+
+\item Assign a generator to every point on every line a generator of $C_k$
+
+\item We define the differential operator $\partial$
+in the following way. If there is no segment coming out of the point, we define its differential to be zero.
+If two points are joined by a line, we define the differential of one as the other.
+
+\end{enumerate}
+
+For example, in the example previous the associated complex would be:
+
+\begin{enumerate}
+
+\item $C_0 = \{\e{0}{0},\e{1}{0}\}$
+
+\item $C_1 = \{\e{0}{1},\e{1}{1}\}$
+
+\item $C_0 = \{\e{0}{2},\e{1}{2}\}$
+
+\item $\partial \e{1}{1}=\e{0}{1}$, $\partial \e{0}{2}=\e{0}{1}$ and 
+$0$ on the rest of the generators.
+\end{enumerate}
+
+And obviosuly $S_{\text{birth}}=\{
+\e{0}{1},
+\e{0}{1}
+\}$,
+$S_{\text{death}}=\{
+\e{1}{1},
+\e{0}{2}
+\}$,
+$
+S_H=\{
+\e{0}{0},
+\e{1}{2}
+\}
+$
+
+\end{example}
+
+\begin{center}
+\includegraphics[height=4cm, width=4cm]{persistence_diagram1.png}
+\end{center}
+
+
+Clearly, from any complex in canonical form we can construct an associated persistent diagram by reversing the above process.
+In the above example we ignored the filtration of the complex, but we consider that the diagram is filtered by height.
+ Therefore:
+
+\begin{proposition}[Canonical form = Persistence diagrams]
+
+There is a natural equivalence between persistence diagrams and canonical forms.
+
+\end{proposition}
+
+
+Persistence diagrams are not the only way we can represent a canonical form. 
+Another important example are codebars.
+
+\begin{definition}
+[Codebars]
+
+By codebar we will mean a representation of similar to one below,
+that a collection of bars, each one index (although index might be repeated),
+where finite bars represent births and deaths and infinite bars represent elements that generate the homology of the complex.
+\end{definition}
+
+\begin{example}
+This example represents the barcode
+associated to the complex of the previous example.
+\end{example}
+
+\begin{center}
+\includegraphics[height=4cm,width=7cm]{barcode1.png}
+\end{center}
+
+
+\section{Some important examples of complexes}
 
 \begin{definition}[{\Cech} Complex]
 
@@ -213,6 +326,8 @@ $$
 \}
 $$
 
+The {\Cech} complex is defined as $\{\tilde{C}_\epsilon\}_{\epsilon>0}$
+
 \end{definition}
 
 However, in practice the {\Cech} complex can get too large to handle, notice that when $\epsilon$ is large enough,
@@ -220,10 +335,34 @@ the {\Cech} complex equals the power set of $X$. One solution to this is using t
 Vietories-Rips complex.
 
 \begin{definition}[Vietoris-Rips Complex]
+Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the \Cech
+complex of level $\epsilon$ as the following simplicial set:
+
+$$
+\tilde{R}_\epsilon(X)
+=
+\{
+\sigma \subset X :
+\text{diam}(\sigma)\leq \epsilon
+\}
+$$
 
 \end{definition}
 
+The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$
+
+\begin{remark}
+Notice than if both the {\Cech} and Vietories-Rips complex, the complex grows in a discrete manner meaning
+that there are only finitely many $\epsilon$ values for which the complex changes if $\epsilon$ is pertubed slightly.
+
+Furthermore, this complex are naturally filtrated and thus, they can be brought into canonical form.
+\end{remark}
+
 \section{Motivation}
+
+Another way in which filtered complexes arise is through Morse functions.
+
+\subsection{Arnold's extension problem}
 
 %\chapter{Canonical form=Persistence diagrams}
 
