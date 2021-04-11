@@ -34,6 +34,8 @@ There are more structures we can put on a complex:
 
 \begin{remark}
 A filtrated complex has a natural order on the generators compatible with the filtration.
+Furthermore, if this filtration increases the dimension of each chain group by dimension $1$ (or $0$) on
+each step, then there is natural correspondence between the filtration and the ordering.
 \end{remark}
 
 \begin{definition}[Complex with ordered generators]
@@ -58,7 +60,7 @@ Then we say that $\{C_k\}_{k=0}^{\infty}$ is in canonical form if,
 is either $0$ or another generator.
 
 \item If $\partial \e{k}{i}=\partial \e{l}{i}\neq 0$,
-then $\e{k}{i}= \e{l}{j}$.
+then $\e{k}{i}= \e{l}{i}$.
 \end{enumerate}
 
 \end{definition}
@@ -91,120 +93,13 @@ $$
 \begin{theorem}
 \cite{bar1994}
 Every filtered chain complex can be reduced to 
-one in canonical form by an upper-triangular change of basis.
+one in canonical form by an upper-triangular change of basis
+which preserves the filtration.
 
 Furthermore, the canonical form is unique.
 \end{theorem}
 
-\begin{prof}
-First we prove that we prove the first statement. 
-Let $\{C_k\}_{k=0}^\infty$ 
-and a basis $\{\e{i}{j}\}_{i,j}$ 
-with $\e{i}{j}\in C_i,\forall i$.
-
-Let $i+1$ be the largest natural so that $C_{\geq n}$
-is not in canonical form. Obviously, $i+1>0$, since $\partial | _{C_0}=0$.
-
-Let $\e{i+1}{j}$ be the generator with smallest $j$ so that $\partial e^i_j$
-is neither 0 nor another generator. Clearly, $i+j>0$, since $\partial | _{C_0}=0$.
-	
-Let $\partial \e{i+1}{j}=\sum \alpha_k \e{k}{j-1}$, then on the LHS, we have terms which are exact (that is, on $S_{\text{death}}$),
-and those which are not. We move all the exact terms in the LHS of the form $\e{k}{j-1}=\partial \e{q}{j}$, with $q\leq i$.
-$$
-\partial\left(
-\e{i+1}{j}
--
-\sum_{q=1}^i
-\e{j}{q}\alpha_{k(q)}
-\right)
-=
-\sum \beta_k \e{k}{j-1}
-$$
-
-Here we separate two cases,
-if the LHS is $0$, then we simply define 
-$$
-\f{j}{i+1}=
-\e{i+1}{j}
--
-\sum_{q=1}^i
-\e{j}{q}\alpha_{k(q)}
-$$
-
-In this case, clearly the linear map $A \e{i+1}{j}=\f{i+1}{j}$ and the identity on the rest 
-has an upper triangular matrix and $\partial f{i+1}{j}=0$.
-
-In the case we can find $\beta_{k_0}\neq 0 $ we pick such $k_0$ so it is maximal. Then:
-
-$$
-\partial
-\frac{1}{\beta_{k_0}}
-\left(
-\e{i+1}{j}
--
-\sum_{q=1}^i
-\e{j}{q}\alpha_{k(q)}
-\right)
-=
-\e{k_0}{j-1}
-+
-\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} \e{k}{j-1}
-$$
-
-In this case, we define:
-
-$$
-\f{i+1}{j}
-=
-\frac{1}{\beta_{k_0}}
-\left(
-\e{i+1}{j}
--
-\sum_{q=1}^i
-\e{q}{j}\alpha_{k(q)}
-\right);
-\quad
-\f{k_{0}}{j-1}
-=
-\e{k_0}{j-1}
-+
-\sum_{k<k_0} \frac{\beta_k}{\beta_{k_0}} \e{k}{j-1}
-$$
-
-Then clearly $\partial \f{i+1}{j}=\f{k_0}{j-1}$ and the obvious change of variable has the desired form.
-This violates our minimality condition, therefore the first statement is proved.
-
-Now we prove the uniqueness part: Suppose we have two bases in canonical form
-$\{\e{i}{j}\}$ and $\{\f{i}{j}\}$. Then choose $i$ and $j$ so that for all $p<j$ and any $m$
-or $p=j$ and $m<i$ then $\e{i}{j}=\f{i}{j}$. 
-
-We can find coefficients $\alpha_k$ and $\beta_k$ so that:
-
-$$
-\f{i}{j}
-=
-\sum_{k=1}^i \alpha_k \e{k}{j},
-\quad
-\partial \f{i}{j} = \f{l}{j-1}
-=
-\sum_{n=1}^l \beta_k \e{k}{j}
-$$
-
-Hence 
-$$
-\partial \e{i}{j}=
-\sum_{n=1}^l
-\e{n}{j-1}\frac{\beta_n}{\alpha_i}
--
-\sum_{k=1}^l
-\partial \e{k}{j-1}\frac{\alpha_k}{\alpha_i}
-$$
-
-This proves the uniqueness of the canonical form since: $\partial \e{i}{j}=\e{m}{j-1},m>l$ and 
-$\e{m}{j-1}\neq \partial a_k^j, \forall k\neq i$
- 
-\end{prof}
-
+%\input{proof/canonicalform.tex}
 
 \begin{corollary}{Category of filtered complexes is semi-simple}
 Any filtered complex, (or one with an ordered basis) can be expressed as a direct sum of 
@@ -227,6 +122,9 @@ on a line of index $i$ to a line of index $i-1$.
 
 Furthermore, this segments always connect point of higher value with points of lower value.
 \end{definition}
+
+When we use persistence diagrams to represent filtered complexes in canonical form,
+we will represent the filtration on the complex by the height of the point. Meaning that the points of height at most $r_i$ will represent the subcomplex $F_{\leq r_i}C_*$
 
 We clarify this definition with an example:
 
@@ -375,7 +273,8 @@ Furthermore, this complex are naturally filtrated and thus, they can be brought 
 
 \section{Motivation}
 
-Another way in which filtered complexes arise is through Morse functions.
+Another way in which filtered complexes arise is through Morse functions. For example, let's 
+consider the following manifold with the morse function being the height function:
 
 \subsection{Arnold's extension problem}
 
