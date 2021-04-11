@@ -7,7 +7,7 @@
 
 \begin{definition}[$\R$-Filtered complex]
 Let $\{C_k\}_{k=0}^{\infty}$ be a complex. 
-A $\R$-filtration on $\{C_k\}_{k=0}^{\infty}$ 
+A $\R$-filtration (sometimes we will simply say a filtration), on $\{C_k\}_{k=0}^{\infty}$ 
 is an increasing sequence of real numbers, $\{r_i\}_{i=0}^n$
 so that for each $r_i$ there as associated $F_{\leq r_i}C_k\subset C_k$ for every $k$
 that satisfies:
@@ -31,29 +31,41 @@ the singular chain comples of a CW-complex is naturally filtered by its skeleton
 
 There are more structures we can put on a complex:
 
-\begin{definition}[Complex with ordered generators]
-
-Let $\{C_k\}_{k=0}^{\infty}$ be a chain complex, with some basis $\{e_k^i\}$.
-Then we say that $\{C_k\}_{k=0}^{\infty}$ has ordered generators when we fix the order 
-$e_k^i<e_l^j$ if $k<l$ or $k=l$ and $i<j$.
-
-\end{definition}
 
 \begin{remark}
-An ordered complex is naturally filtrated.
+A filtrated complex has a natural order on the generators compatible with the filtration.
 \end{remark}
+
+\begin{definition}[Complex with ordered generators]
+
+Let $\{C_k\}_{k=0}^{\infty}$ be a filtered chain complex, with some basis $\{\e{j}{i}\}$.
+Then we say that $\{C_k\}_{k=0}^{\infty}$ has ordered generators when we fix the order 
+$\e{k}{i}<e{l}{j}$ if  $k=l$ and $i<j$.
+
+Notice we do not compare generators that live on different chain groups.
+\end{definition}
+
+
 
 
 \begin{definition}[Canonical form]
 
-Let $\{C_k\}_{k=0}^{\infty}$ be a chain complex, with some basis $\{e_k^i\}$.
-Then we say that $\{C_k\}_{k=0}^{\infty}$ is in it simplest form if, $\partial e_k^i$
+Let $\{C_k\}_{k=0}^{\infty}$ be a chain complex, with some basis $\{\e{k}{i}\}$.
+Then we say that $\{C_k\}_{k=0}^{\infty}$ is in canonical form if,
+
+\begin{enumerate}
+\item $\partial \e{k}{i}$
 is either $0$ or another generator.
+
+\item If $\partial \e{k}{i}=\partial \e{l}{i}\neq 0$,
+then $\e{k}{i}= \e{l}{j}$.
+\end{enumerate}
+
 \end{definition}
 
 \begin{remark}
 \label{canonicalformsplit}
-The canonical form is equivalent to saying that we can find a basis $S$ 
+One consequence of the canonical form is that we can find a basis $S$ 
 of $\{C_k\}_{k=0}^{\infty}$ so that $S$
 can be separated into: 
 \begin{enumerate}
@@ -62,6 +74,9 @@ can be separated into:
 \item $S_{\text{birth}}$: Births, that is, elements whose boundary is $0$, but get killed in homology by an element of higher degree.
 
 \item $S_{\text{death}}$: Deaths, elements whose boundary is another generator. 
+
+\item $\partial$ is a bijection between $S_{\text{death}}$ 
+and $S_{\text{birth}}$.
 \end{enumerate}
 
 That is:
@@ -83,16 +98,16 @@ Furthermore, the canonical form is unique.
 
 \begin{prof}
 First we prove that we prove the first statement. 
-Let ${C_k}_{k=0}^\infty$ 
+Let $\{C_k\}_{k=0}^\infty$ 
 and a basis $\{\e{i}{j}\}_{i,j}$ 
 with $\e{i}{j}\in C_i,\forall i$.
 
-Let $i+1$ be the smallest natural so that $C_{\leq n}$
+Let $i+1$ be the largest natural so that $C_{\geq n}$
 is not in canonical form. Obviously, $i+1>0$, since $\partial | _{C_0}=0$.
 
 Let $\e{i+1}{j}$ be the generator with smallest $j$ so that $\partial e^i_j$
 is neither 0 nor another generator. Clearly, $i+j>0$, since $\partial | _{C_0}=0$.
-
+	
 Let $\partial \e{i+1}{j}=\sum \alpha_k \e{k}{j-1}$, then on the LHS, we have terms which are exact (that is, on $S_{\text{death}}$),
 and those which are not. We move all the exact terms in the LHS of the form $\e{k}{j-1}=\partial \e{q}{j}$, with $q\leq i$.
 $$
@@ -100,7 +115,7 @@ $$
 \e{i+1}{j}
 -
 \sum_{q=1}^i
-e^j_q\alpha_{k(q)}
+\e{j}{q}\alpha_{k(q)}
 \right)
 =
 \sum \beta_k \e{k}{j-1}
@@ -206,7 +221,7 @@ Similarly, the birth and death pairs splits into 2 dimensional complexes with on
 \section{Representations of the canonical form}
 
 \begin{definition}[Persistence diagrams]
-We call a persistence diagram to a finite family on half lines, indexed by $0,1,...$
+We call a persistence diagram to a finite family of half lines, indexed by $0,1,...$
 so that there is a discrete collection of points on each line and there are segments connecting points
 on a line of index $i$ to a line of index $i-1$.
 
@@ -233,7 +248,7 @@ If two points are joined by a line, we define the differential of one as the oth
 
 \end{enumerate}
 
-For example, in the example previous the associated complex would be:
+For example, in this particular case the associated complex would be:
 
 \begin{enumerate}
 

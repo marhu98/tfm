@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  10 APR 2021 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  11 APR 2021 14:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,11 +721,12 @@ Package: amsthm 2015/03/04 v2.20.2
 \c@fakecnt=\count157
 \c@theorem=\count158
 \c@proposition=\count159
-\c@corollary=\count160
-\c@lemma=\count161
-\c@observation=\count162
-\c@example=\count163
-\c@definition=\count164
+\c@remark=\count160
+\c@corollary=\count161
+\c@lemma=\count162
+\c@observation=\count163
+\c@example=\count164
+\c@definition=\count165
 
 
 LaTeX Warning: Unused global option(s):
@@ -756,7 +757,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count165
+\c@section@level=\count166
 )
 LaTeX Info: Redefining \ref on input line 125.
 LaTeX Info: Redefining \pageref on input line 125.
@@ -803,16 +804,16 @@ LaTeX Info: Redefining \nameref on input line 125.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count166
+\scratchcounter=\count167
 \scratchdimen=\dimen191
 \scratchbox=\box41
-\nofMPsegments=\count167
-\nofMParguments=\count168
+\nofMPsegments=\count168
+\nofMParguments=\count169
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count169
+\MPscratchCnt=\count170
 \MPscratchDim=\dimen192
-\MPnumerator=\count170
-\makeMPintoPDFobject=\count171
+\MPnumerator=\count171
+\makeMPintoPDFobject=\count172
 \everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -851,21 +852,21 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<imgs/persistence_diagram1.png, id=71, 284.56313pt x 711.4078pt>
+<imgs/persistence_diagram1.png, id=74, 284.56313pt x 711.4078pt>
 File: imgs/persistence_diagram1.png Graphic file (type png)
 
 <use imgs/persistence_diagram1.png>
-Package pdftex.def Info: imgs/persistence_diagram1.png used on input line 268.
+Package pdftex.def Info: imgs/persistence_diagram1.png used on input line 283.
 (pdftex.def)             Requested size: 113.8102pt x 113.80586pt.
 
-<imgs/barcode1.png, id=73, 535.2497pt x 599.99156pt>
+<imgs/barcode1.png, id=76, 535.2497pt x 599.99156pt>
 File: imgs/barcode1.png Graphic file (type png)
  <use imgs/barcode1.png>
-Package pdftex.def Info: imgs/barcode1.png used on input line 300.
+Package pdftex.def Info: imgs/barcode1.png used on input line 315.
 (pdftex.def)             Requested size: 199.16637pt x 113.80731pt.
 
-[3 <./imgs/persistence_diagram1.png> <./imgs/barcode1.png>]) (./tfm.bbl
-[4]) [5
+[3 <./imgs/persistence_diagram1.png>]) (./tfm.bbl [4 <./imgs/barcode1.png>])
+[5
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
@@ -878,13 +879,13 @@ Package rerunfilecheck Info: File `tfm.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 19117 strings out of 493014
- 360645 string characters out of 6133351
- 435310 words of memory out of 5000000
- 22257 multiletter control sequences out of 15000+600000
+ 19128 strings out of 493014
+ 360734 string characters out of 6133351
+ 435335 words of memory out of 5000000
+ 22262 multiletter control sequences out of 15000+600000
  18400 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,82p,447b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,5n,82p,447b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -905,10 +906,10 @@ ve/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on tfm.pdf (5 pages, 272470 bytes).
+Output written on tfm.pdf (5 pages, 272877 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
