@@ -1,5 +1,8 @@
 \chapter{Introductory concepts}
 
+\input{chapters/conventions.tex}
+
+
 \newcommand{\R}{\mathbb{R}}
 
 \section{Ordered complex and canonical form}
@@ -34,8 +37,8 @@ There are more structures we can put on a complex:
 
 \begin{remark}
 A filtrated complex has a natural order on the generators compatible with the filtration.
-Furthermore, if this filtration increases the dimension of each chain group by dimension $1$ (or $0$) on
-each step, then there is natural correspondence between the filtration and the ordering.
+%Furthermore, if this filtration increases the dimension of each chain group by dimension $1$ (or $0$) on
+%each step, then there is natural correspondence between the filtration and the ordering.
 \end{remark}
 
 \begin{definition}[Complex with ordered generators]
@@ -67,7 +70,7 @@ then $\e{k}{i}= \e{l}{i}$.
 
 \begin{remark}
 \label{canonicalformsplit}
-One consequence of the canonical form is that we can find a basis $S$ 
+An equivalent formulation of the canonical form is that we can find a basis $S$ 
 of $\{C_k\}_{k=0}^{\infty}$ so that $S$
 can be separated into: 
 \begin{enumerate}
@@ -100,6 +103,28 @@ Furthermore, the canonical form is unique.
 \end{theorem}
 
 %\input{proof/canonicalform.tex}
+
+%\begin{definition}[Equivalent complexes]
+%
+%Two filtered complexes,
+%$\{
+%C_*
+%\}$
+%y
+%$\{
+%D_*
+%\}$
+%
+%are said to be equivalent if 
+%there is an isomorphism 
+%
+%\end{definition}
+
+\begin{corollary}
+Two filtered complexes are equivalent
+\ifff they have the same canonical form.
+\end{corollary}
+
 
 \begin{corollary}{Category of filtered complexes is semi-simple}
 Any filtered complex, (or one with an ordered basis) can be expressed as a direct sum of 
@@ -135,7 +160,7 @@ complex in canonical form in the following manner:
 \begin{enumerate}
 
 
-\item To a line of index $i$ we assign
+\item To the line of index $k$ we assign
 it the complex $C_k$.
 
 \item Assign a generator to every point on every line a generator of $C_k$
