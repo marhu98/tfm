@@ -95,6 +95,7 @@ $$
 
 \begin{theorem}
 \cite{bar1994}
+\label{canonicalform}
 Every filtered chain complex can be reduced to 
 one in canonical form by an upper-triangular change of basis
 which preserves the filtration.
@@ -296,13 +297,48 @@ that there are only finitely many $\epsilon$ values for which the complex change
 Furthermore, this complex are naturally filtrated and thus, they can be brought into canonical form.
 \end{remark}
 
+There are many softwares that can be used to compute the
+{\Cech} and Vietories-Rips complexes, most of them rely on bringing the complex to canonical form.
+
 \section{Motivation}
 
 Another way in which filtered complexes arise is through Morse functions. For example, let's 
 consider the following manifold with the morse function being the height function:
 
-\subsection{Arnold's extension problem}
+%\subsection{Arnold's extension problem}
 
 %\chapter{Canonical form=Persistence diagrams}
 
+
+
+%\section{Optimal sequence of metamorphoses of the canonical form}
+%
+%One natural question for quickly computing the canonical form of a complex is 
+%the following: What is the shortest way to bring a complex to canonical form only using 
+%relatively simple transformations.
+%Now, what do we mean by simple transformations?
+%
+%\begin{definition}
+%We say that a transformation of a complex is simple if it is one of the following:
+%
+%\begin{itemize}[label={}]
+%
+%\item {\bf Type (1)}: 
+%A transformation sending $b$ to $b\pm a$
+%
+%\item {\bf Type (2)}:
+%A transformation sending $b$ to $b\pm a$
+%
+%\end{itemize}
+%
+%
+%\end{definition}
+
+
+\section{Example of canonical form}
+
+The proof of theorem \ref{canonicalform} gives an
+algorithmic way to bring a complex into canonical form, 
+we now expose how this methods works with an example. 
+The general case should be clear afterwards.
 
