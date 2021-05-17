@@ -1,5 +1,6 @@
 \chapter{Introductory concepts}
 
+
 \input{chapters/conventions.tex}
 
 
@@ -127,8 +128,8 @@ Two filtered complexes are equivalent
 \end{corollary}
 
 
-\begin{corollary}{Category of filtered complexes is semi-simple}
-Any filtered complex, (or one with an ordered basis) can be expressed as a direct sum of 
+\begin{corollary}{Category of filtered complexes is semi-simple.}
+That is, any filtered complex, (or one with an ordered basis) can be expressed as a direct sum of 
 1 dimensional complexes with trivial differential and 2 dimensional complexes with trivial homology.
 \end{corollary}
 
@@ -139,24 +140,117 @@ Similarly, the birth and death pairs splits into 2 dimensional complexes with on
 
 \end{prof}
 
-\section{Representations of the canonical form}
+\section{Persistence complexes}
 
-\begin{definition}[Persistence diagrams]
-We call a persistence diagram to a finite family of half lines, indexed by $0,1,...$
-so that there is a discrete collection of points on each line and there are segments connecting points
-on a line of index $i$ to a line of index $i-1$.
+\begin{definition}[Persistent complex]
+A persistence complex is a sequence of vector spaces 
+$\{V_i\}_{0\leq i \leq n}$ and maps $f_i:V_i\to V_{i+1}$. That is, a diagram
+as follows:
 
-Furthermore, this segments always connect point of higher value with points of lower value.
+
+$$
+\begin{tikzcd}
+V_0 \arrow[r,"f_0"]
+& V_1 \arrow[r]
+& \cdots\arrow[r,"f_{n-1}"]
+& V_n
+\end{tikzcd}
+$$
+
+
+We denote $f_i^j
+=
+f_j\circ\cdots f_{i+1}\circ f_i
+$ whith $i<j$.
+Persistence diagrams may be of arbitrary cardinal,
+as long as the indexed is set is well-ordered.
+
+But we shall only considered them when they are finite or countable.
+
+We further define it's graded Betti number as:
+
+$$
+b_i^j
+=\left\{
+\begin{array}{l c c}
+\dim(V_i) & \text{if} & i=j\\
+\text{rank}(f_i^j) & \text{if} & i<j\\
+0 & \text{if} & i>j\\
+\end{array}
+\right.
+$$
+
 \end{definition}
 
-When we use persistence diagrams to represent filtered complexes in canonical form,
-we will represent the filtration on the complex by the height of the point. Meaning that the points of height at most $r_i$ will represent the subcomplex $F_{\leq r_i}C_*$
+We give examples of useful persistence diagrams in \ref{examplespersistence}.
 
-We clarify this definition with an example:
+\begin{example}[Interval module]
+We define the interval module for $i<j$
+to be the module where all maps are either the trivial ones, 
+being the identity whenever possible and the zero map otherwise and 
+the $V_k$ to be:
+
+$$
+V_k
+=
+\left\{
+\begin{array}{l l}
+\mathbb{K} & \text{if } i\leq k\leq j\\
+0 & \text{otherwise} 
+\end{array}
+\right.
+$$
+
+
+We denote it by $m(i,j)$.
+
+\end{example}
+
+
+
+\begin{proposition}\cite{zomcar2002}
+The category of countable persistence complex is equivalent to the one of graded modules over
+$\mathbb{K}[t]$
+\end{proposition}
+
+\begin{proposition}\cite{zomcar2002}
+Finite persistence diagrams are classified by 
+their graded Betti numbers.
+
+\end{proposition}
+
+
+\subsection{Representations of the persistent complexes}
+
+%\begin{definition}[Ranks diagrams]
+%Given a persistence diagram, it's rank diagram
+%is a subset of ${(x,y)\in[0,1]^2,x\leq y}$
+%
+%\end{definition}
+
+
+\begin{definition}[Persistence diagrams]
+
+\end{definition}
+
+%\begin{definition}[Persistence diagrams]
+%
+%We call a persistence diagram to a finite family of half lines, indexed by $0,1,...$
+%so that there is a discrete collection of points on each line and there are segments connecting points
+%on a line of index $i$ to a line of index $i-1$.
+%
+%Furthermore, this segments always connect point of higher value with points of lower value.
+%\end{definition}
+
+
+
+Usually we can represent persistence modules as diagrams,
+as is illustrated by the following example.
+%We clarify this definition with an example:
 
 \begin{example}
-The diagram below is a persistence diagram, notice that we can associate a natural 
-complex in canonical form in the following manner:
+The diagram below is a persistence diagram, notice that we can recover the original module in a natural 
+way:
 
 \begin{enumerate}
 
@@ -240,11 +334,31 @@ associated to the complex of the previous example.
 \end{center}
 
 
-\section{Some important examples of complexes}
+\subsection{Some important examples of persistent complexes}
+\label{examplespersistence}
+
+\begin{definition}[Discrete morse complex]
+Let $f:M\to\mathbb{R}$ be a morse function from a compact manifold 
+with finitely many critical points $t_0<\cdots<t_n$. Then the following diagram
+is a persistence complex:
+
+$$
+\begin{tikzcd}
+H^{dR}(f^{-1}(-\infty,t_0)) \arrow[r,"\subseteq"]
+& H^{dR}(f^{-1}(-\infty,t_1)) \arrow[r,"\subseteq"]
+& \cdots\arrow[r,"\subseteq"]
+& H^{dR}(f^{-1}(-\infty,t_n))
+\end{tikzcd}
+$$
+
+Where $H^{dR}$ is the de Rham complex and $\subseteq$
+is homomorphism induced by the natural inclusion.
+
+\end{definition}
 
 \begin{definition}[{\Cech} Complex]
 
-Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the \Cech
+Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the {\Cech}
 complex of level $\epsilon$ as the following simplicial set:
 
 %$$
@@ -272,6 +386,8 @@ The {\Cech} complex is defined as $\{\tilde{C}_\epsilon\}_{\epsilon>0}$
 However, in practice the {\Cech} complex can get too large to handle, notice that when $\epsilon$ is large enough,
 the {\Cech} complex equals the power set of $X$. One solution to this is using the 
 Vietories-Rips complex.
+
+
 
 \begin{definition}[Vietoris-Rips Complex]
 Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the \Cech

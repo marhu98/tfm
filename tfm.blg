@@ -4,45 +4,46 @@ The top-level auxiliary file: tfm.aux
 The style file: plain.bst
 Database file #1: tfm.bib
 Warning--empty journal in bar1994
-You've used 1 entry,
+Warning--empty journal in zomcar2002
+You've used 2 entries,
             2118 wiz_defined-function locations,
-            500 strings with 4051 characters,
-and the built_in function-call counts, 225 in all, are:
-= -- 19
-> -- 7
+            504 strings with 4124 characters,
+and the built_in function-call counts, 428 in all, are:
+= -- 38
+> -- 14
 < -- 0
-+ -- 4
-- -- 2
-* -- 10
-:= -- 47
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
++ -- 7
+- -- 4
+* -- 18
+:= -- 85
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 8
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 10
-empty$ -- 18
-format.name$ -- 2
-if$ -- 41
+cite$ -- 4
+duplicate$ -- 20
+empty$ -- 35
+format.name$ -- 4
+if$ -- 81
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 6
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 12
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 6
 quote$ -- 0
-skip$ -- 7
+skip$ -- 14
 stack$ -- 0
-substring$ -- 6
+substring$ -- 11
 swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 1
-while$ -- 2
-width$ -- 2
-write$ -- 11
-(There was 1 warning)
+type$ -- 8
+warning$ -- 2
+while$ -- 4
+width$ -- 3
+write$ -- 20
+(There were 2 warnings)
