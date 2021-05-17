@@ -140,6 +140,19 @@ Similarly, the birth and death pairs splits into 2 dimensional complexes with on
 
 \end{prof}
 
+\section{Augmented metric spaces}
+
+\begin{definition}
+Let $(X,d)$ be a metric space,
+we say it is augmented if it comes equiped with a function 
+$f:X\to\mathbb{R}$.
+
+\end{definition}
+
+We will say that an augmented metric space is injective if $f$ is.
+
+We will be interested in the case where $X$ is finite.
+
 \section{Persistence complexes}
 
 \begin{definition}[Persistent complex]
@@ -404,7 +417,7 @@ $$
 
 \end{definition}
 
-The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$
+The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$.
 
 \begin{remark}
 Notice than if both the {\Cech} and Vietories-Rips complex, the complex grows in a discrete manner meaning
@@ -415,6 +428,24 @@ Furthermore, this complex are naturally filtrated and thus, they can be brought 
 
 There are many softwares that can be used to compute the
 {\Cech} and Vietories-Rips complexes, most of them rely on bringing the complex to canonical form.
+
+
+Another important example is the following:
+
+\begin{definition}[Bifiltrated Vietories-Rips complex]
+
+Let $\mathcal{X}=(X,d,f)$ be an augmented metric space,
+let $X_\sigma=f^{-1}(-\infty,\sigma)$ we define the bifiltrated
+Vietories-Rips complex as the complex
+$\{\tilde{R}_\epsilon^\sigma\}_{\epsilon>0,\sigma}$
+with:
+
+$$
+\tilde{R}_\epsilon^\sigma=
+\tilde{R}_\epsilon(X_\sigma)
+$$
+
+\end{definition}
 
 \section{Motivation}
 
@@ -457,4 +488,6 @@ The proof of theorem \ref{canonicalform} gives an
 algorithmic way to bring a complex into canonical form, 
 we now expose how this methods works with an example. 
 The general case should be clear afterwards.
+
+
 
