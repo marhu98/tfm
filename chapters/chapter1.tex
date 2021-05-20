@@ -63,7 +63,7 @@ Then we say that $\{C_k\}_{k=0}^{\infty}$ is in canonical form if,
 \item $\partial \e{k}{i}$
 is either $0$ or another generator.
 
-\item If $\partial \e{k}{i}=\partial \e{l}{i}\neq 0$,
+\item If $\partial \e{k}{i}=\partial \e{l}{i}$,
 then $\e{k}{i}= \e{l}{i}$.
 \end{enumerate}
 
@@ -157,7 +157,8 @@ We will be interested in the case where $X$ is finite.
 
 \begin{definition}[Persistent complex]
 A persistence complex is a sequence of vector spaces 
-$\{V_i\}_{0\leq i \leq n}$ and maps $f_i:V_i\to V_{i+1}$. That is, a diagram
+$\{V_i\}_{0\leq i \leq n}$ and homomorphisms
+ $f_i:V_i\to V_{i+1}$. That is, a diagram
 as follows:
 
 
@@ -192,6 +193,20 @@ b_i^j
 \end{array}
 \right.
 $$
+
+\end{definition}
+
+It is worth mentioning that we usually consider the maps $f_i$
+as inclusions and the spaces $V_i$ as chain groups. As such, we
+can sometimes drop the vector space assumption and take 
+modules over a PID. For example, it is common to consider $\mathbb{Z}$
+instead of $\mathbb{K}$. We call this constructions
+persistent modules. Precisely we define:
+
+\begin{definition}(Persistence module)
+A persistence complex is a sequence of modules
+over a PID
+$\{M_i\}_{0\leq i \leq n}$ and homomophisms $f_i:M_i\to M_{i+1}$. 
 
 \end{definition}
 
@@ -242,9 +257,9 @@ their graded Betti numbers.
 %\end{definition}
 
 
-\begin{definition}[Persistence diagrams]
-
-\end{definition}
+%\begin{definition}[Persistence diagrams]
+%
+%\end{definition}
 
 %\begin{definition}[Persistence diagrams]
 %
@@ -257,9 +272,11 @@ their graded Betti numbers.
 
 
 
-Usually we can represent persistence modules as diagrams,
-as is illustrated by the following example.
+%Usually we can represent persistence modules as diagrams,
+%as is illustrated by the following example.
 %We clarify this definition with an example:
+
+Firstofall, we can represent canonical form as in the following example:
 
 \begin{example}
 The diagram below is a persistence diagram, notice that we can recover the original module in a natural 
@@ -319,11 +336,11 @@ Clearly, from any complex in canonical form we can construct an associated persi
 In the above example we ignored the filtration of the complex, but we consider that the diagram is filtered by height.
  Therefore:
 
-\begin{proposition}[Canonical form = Persistence diagrams]
-
-There is a natural equivalence between persistence diagrams and canonical forms.
-
-\end{proposition}
+%\begin{proposition}[Canonical form = Persistence diagrams]
+%
+%There is a natural equivalence between persistence diagrams and canonical forms.
+%
+%\end{proposition}
 
 
 Persistence diagrams are not the only way we can represent a canonical form. 
@@ -449,8 +466,9 @@ $$
 
 \section{Motivation}
 
-Another way in which filtered complexes arise is through Morse functions. For example, let's 
-consider the following manifold with the morse function being the height function:
+%Another way in which filtered complexes arise is through Morse functions. 
+%For example, let's 
+%consider the following manifold with the morse function being the height function:
 
 %\subsection{Arnold's extension problem}
 
