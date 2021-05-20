@@ -1,4 +1,4 @@
-\chapter{Introductory concepts}
+\chapter{Canonical form}
 
 
 \input{chapters/conventions.tex}
@@ -207,6 +207,7 @@ persistent modules. Precisely we define:
 A persistence complex is a sequence of modules
 over a PID
 $\{M_i\}_{0\leq i \leq n}$ and homomophisms $f_i:M_i\to M_{i+1}$. 
+With the rest of the definitions as above.
 
 \end{definition}
 
@@ -230,7 +231,8 @@ V_k
 $$
 
 
-We denote it by $m(i,j)$.
+We denote it by $m(i,j)$
+and we define it's associated interval to be $[i,j)$.
 
 \end{example}
 
@@ -247,6 +249,23 @@ their graded Betti numbers.
 
 \end{proposition}
 
+\begin{proposition}\cite{zomcar2002}
+Every persistence module is the direct sum of interval modules.
+Furthermore, the multiplicity of each interval module is an invariant
+of the complex.
+
+This intervals are called the persistence intervals of a given 
+persistence module.
+\end{proposition}
+
+%\subsection{Canonical form=Persistence diagrams}
+
+One important observation about the previous proposition,
+is that a complex in canonical form gives a clear idea of what the persistence 
+diagrams decomposition is. In particular, the beginning of a interval
+indicates a birth and the end of an interval indicates a death. And
+so, an element represent a non-trivial cohomology class if and only if
+it belongs to an interval of the form $[\alpha,\infty)$
 
 \subsection{Representations of the persistent complexes}
 
