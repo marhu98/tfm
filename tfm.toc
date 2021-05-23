@@ -1,5 +1,14 @@
-\contentsline {chapter}{\numberline {1}Introductory concepts}{3}
-\contentsline {section}{\numberline {1.1}Ordered complex and canonical form}{3}
-\contentsline {section}{\numberline {1.2}Some examples of complexes}{4}
-\contentsline {section}{\numberline {1.3}Motivation}{5}
-\contentsline {subsection}{\numberline {1.3.1}Arnold's extension problem}{5}
+\contentsline {chapter}{\numberline {1}Morse theory: A quick introduction}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Fundamental theorems of Morse theory}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}An application of Morse theory}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}The Morse-Smale complex}{3}{section.1.3}
+\contentsline {chapter}{\numberline {2}Canonical form}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Ordered complex and canonical form}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Augmented metric spaces}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Persistence complexes}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Representations of the persistent complexes}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Some important examples of persistent complexes}{8}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Motivation}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Example of canonical form}{8}{section.2.5}
+\contentsline {chapter}{\numberline {3}Elder-rule Staircodes}{9}{chapter.3}
+\contentsline {chapter}{\numberline {4}Morse functions on point clouds}{11}{chapter.4}

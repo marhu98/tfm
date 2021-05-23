@@ -1,10 +1,89 @@
-\chapter{Canonical form}
+\chapter{Morse theory: A quick introduction}
+
+\begin{definition}[Differential complex]
+We say that a collection of indexed abelian groups
+$\{C_i\}_{i=0}^{\infty}$ is a differential complex if
+it has a linear operator:
+$\delta_i: C_{i+1}\to C_i$
+so that $\delta_i\circ\delta_{i+1}=0$.
+
+Usually, we shall consider $\delta: C\to C$ where $C=\oplus C_i$
+and $\delta$ is defined as the unique linear operator that coincides with $\delta_i$
+when the domain is restricted to $C_i$.
+
+And so, we may write that $\{C_i\}_{i=0}^{\infty}$ 
+is a differential complex if and only if $\delta^2=0$.
+\end{definition}
+
+Given a manifold we can build a nice function on it, $f$,
+so that it's sublevels $M^t=f^{-1}(-\infty,t]$ give us a natural way to 
+deduce a CW-structure for the manifold.
+
+In fact, these same function give us in a natural way the Morse-Smale complex,
+which allows us to compute the homology of the manifold.
+
+\begin{definition}[Morse function]
+
+Let $M$ be a manifold, and $f\in C^\infty(M,\mathbb{R})$.
+We say that $f$ is a morse function if the set of critical points
+of $f$ is isolated. 
+
+That is, if:
+$
+Crit(f)=\{x\in M: df\vert_x=0
+\}
+$
+is isolated.
+
+\end{definition}
+
+It is well known that for any given manifold there are plenty of Morse functions,
+in particular we have the following:
 
 
-\input{chapters/conventions.tex}
+{\color{red} Missing quote}
+\begin{theorem}
+Let $g\in C^\infty(M,\mathbb{R})$, and let $\epsilon>0$
+then there exists $f\in C^\infty(M,\mathbb{R})$ so that $f$
+is a Morse function and $f$ and $g$ are $C^2$-close.
+\end{theorem}
+
+So Morse functions are dense in the ring $C^\infty(M,\mathbb{R})$,
+and a fortiori, Morse functions always exits.
 
 
 \newcommand{\R}{\mathbb{R}}
+
+One important source of complexes is the Morse-Smale complex,
+which arises in a natural way.
+
+
+\section{Fundamental theorems of Morse theory}
+
+\begin{theorem}[Morse lemma]
+\end{theorem}
+
+\begin{theorem}[Morse inequalities]
+\end{theorem}
+
+
+\section{An application of Morse theory}
+
+In this section we describe how to use Morse theory to classify closed $1$-manifolds.
+In particular, we show the well-know theorem:
+
+\begin{theorem}
+A closed connected $1$-manifold is diffeomorphic to $\mathbb{S}^1$.
+\end{theorem}
+
+We briefly mention that it can be used to derive the usual classification of $2$-manifolds.
+
+\section{The Morse-Smale complex}
+
+
+\chapter{Canonical form}
+
+\input{chapters/conventions.tex}
 
 \section{Ordered complex and canonical form}
 
