@@ -310,36 +310,41 @@ In the above example we ignored the filtration of the complex, but we consider t
 %\end{proposition}
 
 
-Persistence diagrams are not the only way we can represent a canonical form. 
-Another important example are codebars.
+%Persistence diagrams are not the only way we can represent a canonical form. 
+%Another important example are codebars.
 
-\begin{definition}
-[Codebars]
+%\begin{definition}
+%[Codebars]
+%
+%By codebar we will mean a representation of similar to one below,
+%that a collection of bars, each one index (although index might be repeated),
+%where finite bars represent births and deaths and infinite bars represent elements that generate the homology of the complex.
+%\end{definition}
 
-By codebar we will mean a representation of similar to one below,
-that a collection of bars, each one index (although index might be repeated),
-where finite bars represent births and deaths and infinite bars represent elements that generate the homology of the complex.
-\end{definition}
+
+We have two natural ways to represent the persistent homology of a 
+filtered complex, one is persistent codebars and the other is persistent 
 
 \begin{example}
-The diagram below is a persistence diagram, notice that we can recover the original module in a natural 
-way:
-
-\begin{enumerate}
 
 
-\item To the line of index $k$ we assign
-it the complex $C_k$.
+%\begin{enumerate}
+%
+%
+%\item To the line of index $k$ we assign
+%it the complex $C_k$.
+%
+%\item Assign a generator to every point on every line a generator of $C_k$
+%
+%\item We define the differential operator $\partial$
+%in the following way. If there is no segment coming out of the point, we define its differential to be zero.
+%If two points are joined by a line, we define the differential of one as the other.
+%
+%\end{enumerate}
 
-\item Assign a generator to every point on every line a generator of $C_k$
+%For example, in this particular case the associated complex would be:
 
-\item We define the differential operator $\partial$
-in the following way. If there is no segment coming out of the point, we define its differential to be zero.
-If two points are joined by a line, we define the differential of one as the other.
-
-\end{enumerate}
-
-For example, in this particular case the associated complex would be:
+Consider the following complex:
 
 \begin{enumerate}
 
@@ -368,20 +373,28 @@ S_H=\{
 \}
 $
 
+Then we have that it's persistence codebar would be:
+
 \begin{center}
 \includegraphics[height=4cm, width=4cm]{persistence_diagram1.png}
 \end{center}
 
-\end{example}
 
-
-This example represents the barcode
-associated to the complex of the previous example.
+%This example represents the barcode
+%associated to the complex of the previous example.
 
 
 \begin{center}
 \includegraphics[height=4cm,width=7cm]{barcode1.png}
 \end{center}
+
+And it's persistence diagram would be the following:
+
+\end{example}
+
+
+
+
 
 
 \subsection{Some important examples of persistent complexes}
