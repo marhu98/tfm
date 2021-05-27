@@ -1,7 +1,7 @@
-\contentsline {chapter}{\numberline {1}Morse theory: A quick introduction}{3}{chapter.1}
+\contentsline {chapter}{\numberline {1}Morse theory: A quick review}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Fundamental theorems of Morse theory}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}An application of Morse theory}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}The Morse-Smale complex}{3}{section.1.3}
+\contentsline {section}{\numberline {1.2}An application of Morse theory}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}The Morse-Smale complex}{4}{section.1.3}
 \contentsline {chapter}{\numberline {2}Canonical form}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Ordered complex and canonical form}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Augmented metric spaces}{6}{section.2.2}

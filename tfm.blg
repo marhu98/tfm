@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: tfm.bib
 Warning--empty journal in bar1994
 Warning--empty journal in zomcar2002
-You've used 2 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            504 strings with 4124 characters,
-and the built_in function-call counts, 428 in all, are:
-= -- 38
-> -- 14
+            518 strings with 4400 characters,
+and the built_in function-call counts, 1042 in all, are:
+= -- 98
+> -- 35
 < -- 0
-+ -- 7
-- -- 4
-* -- 18
-:= -- 85
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 8
++ -- 17
+- -- 10
+* -- 42
+:= -- 202
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 20
-empty$ -- 35
-format.name$ -- 4
-if$ -- 81
+cite$ -- 7
+duplicate$ -- 50
+empty$ -- 86
+format.name$ -- 10
+if$ -- 204
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 12
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 15
 quote$ -- 0
-skip$ -- 14
+skip$ -- 35
 stack$ -- 0
-substring$ -- 11
-swap$ -- 0
+substring$ -- 27
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 20
 warning$ -- 2
-while$ -- 4
-width$ -- 3
-write$ -- 20
+while$ -- 10
+width$ -- 6
+write$ -- 50
 (There were 2 warnings)

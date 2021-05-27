@@ -1,4 +1,7 @@
-\chapter{Morse theory: A quick introduction}
+\newcommand{\R}{\mathbb{R}}
+
+
+\chapter{Morse theory: A quick review}
 
 \begin{definition}[Differential complex]
 We say that a collection of indexed abelian groups
@@ -37,12 +40,15 @@ is isolated.
 
 \end{definition}
 
+We say that a critical point of $f$ has index $k$,
+if the hessian of $f$ has index $k$ at the critical point.
+
 It is well known that for any given manifold there are plenty of Morse functions,
 in particular we have the following:
 
 
-{\color{red} Missing quote}
 \begin{theorem}
+\cite{mat1997}
 Let $g\in C^\infty(M,\mathbb{R})$, and let $\epsilon>0$
 then there exists $f\in C^\infty(M,\mathbb{R})$ so that $f$
 is a Morse function and $f$ and $g$ are $C^2$-close.
@@ -51,8 +57,10 @@ is a Morse function and $f$ and $g$ are $C^2$-close.
 So Morse functions are dense in the ring $C^\infty(M,\mathbb{R})$,
 and a fortiori, Morse functions always exits.
 
+Morse functions give quite a bit of topological information on the manifold,
+specially in the compact case. 
 
-\newcommand{\R}{\mathbb{R}}
+
 
 One important source of complexes is the Morse-Smale complex,
 which arises in a natural way.
@@ -61,11 +69,113 @@ which arises in a natural way.
 \section{Fundamental theorems of Morse theory}
 
 \begin{theorem}[Morse lemma]
+\cite{mat1997}
+Let $M^n$ be a manifold, and $f$ a Morse function on $M$.
+Let $x_0$ be critical point of $f$ of index $k$.
+
+
+Then there is a neighbourhood $V$ of $x_0$ and a chart 
+$y:U\to V\subset M$. so that:
+
+$$
+f\circ y (y_1,\ldots,y_n)
+=
+-y_1^2
+-\cdots
+-y_k^2
++y_{k+1}^2
++\cdots
++y_n^2
++C
+$$
+
+Where $C$ is a constant.
 \end{theorem}
+
+Let $f$ be a Morse function on $M$,
+We notice that in the compact case $f$ has 
+a minimum, $m$ and a maximum $M$
+achieved at points $x_m$ and $x_M$.
+
+Then $M^{x_m}=\emptyset$ and $M^{x_M}=M$.
+This hints that we can restruct $M$ from how the sets $M^t$
+change as $t$ moves through the real line.
+
+In particular, fix some $\varepsilon$ which will be assumed to be
+as small as needed, we wonder if there is any relation between $M^t$
+and $M^{t+\varepsilon}$. It turns out, as Morse \cite{mor1934} showed
+we have that if $f$ does not have any critical point in the interval 
+$(t,t+\varepsilon)$ then
+ $M^t$ and $M^{t+\varepsilon}$ are difeomorphic. The proof is
+ in fact quite elementary.
+ 
+ A more subtle thing Morse proved is what happens when $M^t$
+ crosses over a critical point. In this cased he showed that,
+ if choose $\varepsilon$ so that $Crit(f)\cap (t,t+\varepsilon)$
+ has exactly one point (which we can always do by hypothesis)
+ then
+  $M^{t+\varepsilon}$ can be obtained by adjoining a $k$-cell to $M^t$
+ where $k$ happens to be the index of the unique critical point in 
+$(t,t+\varepsilon)$.
+
+
+In summary
+
+\begin{theorem}
+\cite{mor1934}
+Let $\varepsilon>0$ so that
+$$Crit(f)\cap (t,t+\varepsilon)=\emptyset$$
+
+Then   $M^{t}$ and $M^{t+\varepsilon}$ 
+are difeomorphic.
+
+
+\end{theorem}
+
+\begin{theorem}
+\cite{mor1934}
+Let $\varepsilon>0$ so that
+$$Crit(f)\cap (t,t+\varepsilon)=\{x_0\}$$
+
+Let $k$ be the index of $x_0$. Then
+
+Then  $M^{t+\varepsilon}$ 
+is homotopy equivalent to $M^t\cup_\phi (D^{n-k}\times D^k)$ where
+$D^k$ is the $k$-disk and $\phi$ is and adjunction map
+between $\partial (D^{n-k}\times D^k)$ and $\partial M^t$.
+
+
+\end{theorem}
+
+
+\begin{corollary}
+\cite{sma1961}
+Any compact manifold 
+of dimension $n$
+is homotopy equivalent to a space such as the following:
+
+$$
+D^n\cup
+D^{n-k_1}\times D^{k_1}
+\cup
+\cdots
+\cup
+D^{n-k_m}\times D^{k_m}
+$$
+\end{corollary}
+
 
 \begin{theorem}[Morse inequalities]
-\end{theorem}
+Let $M$ be a compact manifold, and $b_i$ it's betti numbers.
+Let $f$ be a Morse function on $M$. And let $\lambda_k$ be the 
+number of $k$-index critical points of $f$. Then we have that:
 
+$$
+\lambda_i\geq b_i,\quad
+\forall i\in\mathbb{N}
+$$
+
+\end{theorem}
 
 \section{An application of Morse theory}
 
@@ -78,7 +188,14 @@ A closed connected $1$-manifold is diffeomorphic to $\mathbb{S}^1$.
 
 We briefly mention that it can be used to derive the usual classification of $2$-manifolds.
 
+
+
+
+
 \section{The Morse-Smale complex}
+
+
+
 
 
 \chapter{Canonical form}
@@ -521,12 +638,26 @@ $$
 \}
 $$
 
-The {\Cech} complex is defined as $\{\tilde{C}_\epsilon\}_{\epsilon>0}$
+Then we define the {\Cech} complex at level $\varepsilon$ to be $\tilde{C}_\epsilon$.
+%The {\Cech} complex is defined as $\{\tilde{C}_\epsilon\}_{\epsilon>0}$
 
 \end{definition}
 
-However, in practice the {\Cech} complex can get too large to handle, notice that when $\epsilon$ is large enough,
-the {\Cech} complex equals the power set of $X$. One solution to this is using the 
+%The {\Cech} has one key advantage, given a compact space, we
+%can always choose $\varepsilon$ small enough and a
+%natural toplogy so that the resulting {\Cech}
+%complex is homotopy equivalent to the underlying space.
+%
+%\begin{theorem}[Nerve theorem]
+%
+%\end{theorem}
+
+However, in practice the {\Cech} complex is very hard to calculate,
+notice that as the dimension of $\mathbb{R}^n$ increases it would be necessary
+to calculate the intersection of $n-1$-dimensional spheres, which is it a
+computationally complex problem.
+
+One solution to this is using the 
 Vietories-Rips complex.
 
 
@@ -546,7 +677,9 @@ $$
 
 \end{definition}
 
-The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$.
+%The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$.
+Then we define the Vietories-Rips complex at level $\varepsilon$ to be $\tilde{R}_\epsilon$.
+
 
 \begin{remark}
 Notice than if both the {\Cech} and Vietories-Rips complex, the complex grows in a discrete manner meaning
@@ -559,7 +692,8 @@ There are many softwares that can be used to compute the
 {\Cech} and Vietories-Rips complexes, most of them rely on bringing the complex to canonical form.
 
 
-Another important example is the following:
+Notice that we can combine the Vietories-Rips (or {\Cech}) complex 
+with an already existing filtration to give a bifiltrated complex:
 
 \begin{definition}[Bifiltrated Vietories-Rips complex]
 

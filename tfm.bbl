@@ -10,4 +10,19 @@ Afra~Zomorodian Gunnar~Carlson.
 \newblock Computing persistent homology.
 \newblock 2002.
 
+\bibitem{mat1997}
+Yukio Matsumoto.
+\newblock Computing persistent homology.
+\newblock {\em Translations of Mathematical Monographs}, 1997.
+
+\bibitem{mor1934}
+Marston Morse.
+\newblock The calculus of variations in the large.
+\newblock {\em American Mathematical Society Colloquium Publication}, 1934.
+
+\bibitem{sma1961}
+S.~Smale.
+\newblock Generalized poincare's conjecture in dimensions greater than four.
+\newblock {\em Ann. of Math}, 1961.
+
 \end{thebibliography}
