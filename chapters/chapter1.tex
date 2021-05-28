@@ -658,7 +658,7 @@ to calculate the intersection of $n-1$-dimensional spheres, which is it a
 computationally complex problem.
 
 One solution to this is using the 
-Vietories-Rips complex.
+Vietoris-Rips complex.
 
 
 
@@ -667,7 +667,7 @@ Let $X\subset \R^n$ be a discrete subset. Then, for $d>0$, we define the \Cech
 complex of level $\epsilon$ as the following simplicial set:
 
 $$
-\tilde{R}_\epsilon(X)
+VR_\epsilon(X)
 =
 \{
 \sigma \subset X :
@@ -678,37 +678,87 @@ $$
 \end{definition}
 
 %The Vietoris-Rips complex is defined as $\{\tilde{R}_\epsilon\}_{\epsilon>0}$.
-Then we define the Vietories-Rips complex at level $\varepsilon$ to be $\tilde{R}_\epsilon$.
+Then we define the Vietoris-Rips complex at level $\varepsilon$ to be 
+$VR_\epsilon$.
+
+\begin{theorem}
+Let $X$ and $\varepsilon>0$, then $\tilde C_\varepsilon(X)$
+is homotopy equivalent to the union of the $\varepsilon$-balls centered 
+around the point of the complex. Explicitly:
+$$
+\tilde C_\varepsilon(X)
+\quad
+\overset{\text{h-eq}}
+{{
+=
+\joinrel=
+}}
+\displaystyle\bigcup_{x \text{
+vertex in 
+}
+\tilde C_\varepsilon(X)
+}
+B(x,\varepsilon)
+$$
+\end{theorem}
 
 
-\begin{remark}
-Notice than if both the {\Cech} and Vietories-Rips complex, the complex grows in a discrete manner meaning
-that there are only finitely many $\epsilon$ values for which the complex changes if $\epsilon$ is pertubed slightly.
-
-Furthermore, this complex are naturally filtrated and thus, they can be brought into canonical form.
-\end{remark}
+%\begin{remark}
+%Notice than if both the {\Cech} and Vietoris-Rips complex, the complex grows in a discrete manner meaning
+%that there are only finitely many $\epsilon$ values for which the complex changes if $\epsilon$ is pertubed slightly.
+%
+%Furthermore, this complex are naturally filtrated and thus, they can be brought into canonical form.
+%\end{remark}
 
 There are many softwares that can be used to compute the
-{\Cech} and Vietories-Rips complexes, most of them rely on bringing the complex to canonical form.
+{\Cech} and Vietoris-Rips complexes, most of them rely on bringing the complex to canonical form.
 
 
-Notice that we can combine the Vietories-Rips (or {\Cech}) complex 
+Notice that we can combine the Vietoris-Rips (or {\Cech}) complex 
 with an already existing filtration to give a bifiltrated complex:
 
-\begin{definition}[Bifiltrated Vietories-Rips complex]
+\begin{definition}[Bifiltrated Vietoris-Rips complex]
 
 Let $\mathcal{X}=(X,d,f)$ be an augmented metric space,
-let $X_\sigma=f^{-1}(-\infty,\sigma)$ we define the bifiltrated
-Vietories-Rips complex as the complex
-$\{\tilde{R}_\epsilon^\sigma\}_{\epsilon>0,\sigma}$
+let $X_\sigma=f^{-1}(-\infty,\sigma]$ we define the bifiltrated
+Vietoris-Rips complex as the complex
+$\{{VR}_\epsilon^\sigma\}_{\epsilon>0,\sigma}$
 with:
 
 $$
-\tilde{R}_\epsilon^\sigma=
-\tilde{R}_\epsilon(X_\sigma)
+{VR}_\epsilon^\sigma=
+{VR}_\epsilon(X_\sigma)
 $$
 
 \end{definition}
+
+\section{Comparison of the {\Cech} and Vietoris-Rips complex}
+
+One great advantage of the {\Cech} complex is that it's homotopy type is highly predictable.
+In particular, we have the classical {\Cech} nerve theorem:
+
+This means we can always approximate the homology of a compact
+manifold with the {\Cech} complex using a relatively low amount of points.
+In the case of the Vietoris-Rips complex things are different.
+
+
+However, there is a natural relation between these two complexes:
+
+\begin{proposition}
+The {\Cech} complex is always a subcomplex of the Rips complex. 
+We also have a partial converse:
+$VR_\varepsilon(X)$ is a subcomplex of $\tilde C_\frac{\varepsilon}{2}(X)$
+
+More precisely:
+$$
+\tilde C_\varepsilon(X)
+\hookrightarrow
+VR_\varepsilon(X)
+\hookrightarrow
+\tilde C_\frac{\varepsilon}{2}(X)
+$$
+\end{proposition}
+
 
 \section{Motivation}
 
