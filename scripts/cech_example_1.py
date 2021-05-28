@@ -44,6 +44,6 @@ def forplot(eps,alpha=0.2,name =None):
 
 
     #show()
-forplot(0.6,name="../imgs/cech_example_1_0.6.png")
-forplot(0.8,name="../imgs/cech_example_1_0.8.png")
-forplot(1.2,name="../imgs/cech_example_1_1.2.png")
+forplot(0.6,name="../imgs/cech_example_1_0_6.png")
+forplot(0.8,name="../imgs/cech_example_1_0_8.png")
+forplot(1.2,name="../imgs/cech_example_1_1_2.png")
