@@ -28,7 +28,7 @@ def forplot(eps,alpha=0.2,name =None):
     for p in points:
         ax.add_patch(Circle(p,eps,color=colors[1],alpha=alpha))
         
-    if eps>1:
+    if eps>2:
         plot(*toplot(points[0],[0,0]),"--",color=colors[0])
         plot(*toplot(points[1],[0,0]),"--",color=colors[0])
         plot(*toplot(points[2],[0,0]),color=colors[0])
@@ -45,6 +45,7 @@ def forplot(eps,alpha=0.2,name =None):
 
 
     #show()
-forplot(0.6,name="../imgs/cech_example_1_0_6.png")
-forplot(0.8,name="../imgs/cech_example_1_0_8.png")
-forplot(1.2,name="../imgs/cech_example_1_1_2.png")
+forplot(0.6,name="../imgs/vr_example_1_0_6.png")
+forplot(0.8,name="../imgs/vr_example_1_0_8.png")
+forplot(1.2,name="../imgs/vr_example_1_1_2.png")
+forplot(2.2,name="../imgs/vr_example_1_2_2.png")
