@@ -2,20 +2,6 @@
 \chapter{Morse theory: A quick review}
 \input{chapters/conventions.tex}
 
-\begin{definition}[Differential complex]
-We say that a collection of indexed abelian groups
-$\{C_i\}_{i=0}^{\infty}$ is a differential complex if
-it has a linear operator:
-$\delta_i: C_{i+1}\to C_i$
-so that $\delta_i\circ\delta_{i+1}=0$.
-
-Usually, we shall consider $\delta: C\to C$ where $C=\oplus C_i$
-and $\delta$ is defined as the unique linear operator that coincides with $\delta_i$
-when the domain is restricted to $C_i$.
-
-And so, we may write that $\{C_i\}_{i=0}^{\infty}$ 
-is a differential complex if and only if $\delta^2=0$.
-\end{definition}
 
 Given a manifold we can build a nice function on it, $f$,
 so that it's sublevels $M^t=f^{-1}(-\infty,t]$ give us a natural way to 
@@ -112,7 +98,7 @@ $(t,t+\varepsilon)$ then
  
  A more subtle thing Morse proved is what happens when $M^t$
  crosses over a critical point. In this cased he showed that,
- if choose $\varepsilon$ so that $Crit(f)\cap (t,t+\varepsilon)$
+ if choose $\varepsilon$ so that $\text{Crit}(f)\cap (t,t+\varepsilon)$
  has exactly one point (which we can always do by hypothesis)
  then
   $M^{t+\varepsilon}$ can be obtained by adjoining a $k$-cell to $M^t$
@@ -125,7 +111,7 @@ In summary
 \begin{theorem}
 \cite{mor1934}
 Let $\varepsilon>0$ so that
-$$Crit(f)\cap (t,t+\varepsilon)=\emptyset$$
+$$\text{Crit}(f)\cap (t,t+\varepsilon)=\emptyset$$
 
 Then   $M^{t}$ and $M^{t+\varepsilon}$ 
 are difeomorphic.
@@ -136,14 +122,14 @@ are difeomorphic.
 \begin{theorem}
 \cite{mor1934}
 Let $\varepsilon>0$ so that
-$$Crit(f)\cap (t,t+\varepsilon)=\{x_0\}$$
+$$\text{Crit}(f)\cap (t,t+\varepsilon)=\{x_0\}$$
 
 Let $k$ be the index of $x_0$. Then
 
 Then  $M^{t+\varepsilon}$ 
 is homotopy equivalent to $M^t\cup_\phi (D^{n-k}\times D^k)$ where
-$D^k$ is the $k$-disk and $\phi$ is and adjunction map
-between $\partial (D^{n-k}\times D^k)$ and $\partial M^t$.
+$D^k$ is the $k$-disk and $\phi$ is and adjunction map.
+%between $\partial (D^{n-k}\times D^k)$ and $\partial M^t$.
 
 
 \end{theorem}
@@ -195,6 +181,22 @@ We briefly mention that it can be used to derive the usual classification of $2$
 
 \section{The Morse-Smale complex}
 
+\begin{definition}[Differential complex]
+We say that a collection of indexed abelian groups
+$\{C_i\}_{i=0}^{\infty}$ is a differential complex if
+it has a linear operator:
+$\delta_i: C_{i+1}\to C_i$
+so that $\delta_i\circ\delta_{i+1}=0$.
+
+Usually, we shall consider $\delta: C\to C$ where $C=\oplus C_i$
+and $\delta$ is defined as the unique linear operator 
+that verifies: $\delta\vert_{C_i}=\delta_i$.
+
+And so, we may write that $\{C_i\}_{i=0}^{\infty}$ 
+is a differential complex if and only if $\delta^2=0$.
+\end{definition}
+
+
 Morse functions give a natural complex which computes the homology
 of the manifold.
 
@@ -202,14 +204,15 @@ We define the chain groups
 to be:
 
 $$
-C_f(f)
+C_k(f)
 \defequal
 \left\{
 \sum
 _
-{c\in Crit_k(f)}
+{c\in \text{Crit}_{k}(f)}
 a c
-\vert
+%\vert
+:
 a\in \mathbb{Z}_2
 \right\}
 $$
@@ -220,12 +223,11 @@ $$
 \partial a
 =
 \sum
-_{b\in Crit_k(f)}
+_{b\in \text{Crit}_{k-1}(f)}
 n(a,b)b
 $$
 
 Where $n(a,b)$ is the number of trajectories flowing from $a$
 to $b$ through the gradient flow. This number is finite, and
 we have that $\partial^2=0$.
-
 

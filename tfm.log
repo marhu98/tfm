@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  29 MAY 2021 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.16)  29 MAY 2021 23:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -909,13 +909,13 @@ Chapter 2.
 File: imgs/persistence_diagram1.png Graphic file (type png)
 
 <use imgs/persistence_diagram1.png>
-Package pdftex.def Info: imgs/persistence_diagram1.png used on input line 375.
+Package pdftex.def Info: imgs/persistence_diagram1.png used on input line 374.
 (pdftex.def)             Requested size: 113.8102pt x 113.80586pt.
 
 <imgs/barcode1.png, id=174, 551.81157pt x 599.99156pt>
 File: imgs/barcode1.png Graphic file (type png)
  <use imgs/barcode1.png>
-Package pdftex.def Info: imgs/barcode1.png used on input line 384.
+Package pdftex.def Info: imgs/barcode1.png used on input line 383.
 (pdftex.def)             Requested size: 199.17404pt x 113.80731pt.
 
 [7 <./imgs/persistence_diagram1.png> <./imgs/barcode1.png>]
@@ -923,21 +923,21 @@ Package pdftex.def Info: imgs/barcode1.png used on input line 384.
 File: imgs/cech_example_1_0_6.png Graphic file (type png)
 
 <use imgs/cech_example_1_0_6.png>
-Package pdftex.def Info: imgs/cech_example_1_0_6.png used on input line 485.
+Package pdftex.def Info: imgs/cech_example_1_0_6.png used on input line 484.
 (pdftex.def)             Requested size: 150.32504pt x 150.32687pt.
 
 <imgs/cech_example_1_0_8.png, id=192, 722.7pt x 722.7pt>
 File: imgs/cech_example_1_0_8.png Graphic file (type png)
 
 <use imgs/cech_example_1_0_8.png>
-Package pdftex.def Info: imgs/cech_example_1_0_8.png used on input line 492.
+Package pdftex.def Info: imgs/cech_example_1_0_8.png used on input line 491.
 (pdftex.def)             Requested size: 150.32504pt x 150.32687pt.
 
 <imgs/cech_example_1_1_2.png, id=193, 722.7pt x 722.7pt>
 File: imgs/cech_example_1_1_2.png Graphic file (type png)
 
 <use imgs/cech_example_1_1_2.png>
-Package pdftex.def Info: imgs/cech_example_1_1_2.png used on input line 499.
+Package pdftex.def Info: imgs/cech_example_1_1_2.png used on input line 498.
 (pdftex.def)             Requested size: 150.32504pt x 150.32687pt.
  [8 <./imgs/cech_example_1_0_6.png> <./imgs/cech_example_1_0_8.png> <./imgs/cec
 h_example_1_1_2.png>]
@@ -945,34 +945,34 @@ h_example_1_1_2.png>]
 File: imgs/vr_example_1_0_6.png Graphic file (type png)
 
 <use imgs/vr_example_1_0_6.png>
-Package pdftex.def Info: imgs/vr_example_1_0_6.png used on input line 569.
+Package pdftex.def Info: imgs/vr_example_1_0_6.png used on input line 568.
 (pdftex.def)             Requested size: 112.74377pt x 112.73412pt.
 
 <imgs/vr_example_1_0_8.png, id=209, 722.7pt x 722.7pt>
 File: imgs/vr_example_1_0_8.png Graphic file (type png)
 
 <use imgs/vr_example_1_0_8.png>
-Package pdftex.def Info: imgs/vr_example_1_0_8.png used on input line 576.
+Package pdftex.def Info: imgs/vr_example_1_0_8.png used on input line 575.
 (pdftex.def)             Requested size: 112.74377pt x 112.73412pt.
 
 <imgs/vr_example_1_1_2.png, id=210, 722.7pt x 722.7pt>
 File: imgs/vr_example_1_1_2.png Graphic file (type png)
 
 <use imgs/vr_example_1_1_2.png>
-Package pdftex.def Info: imgs/vr_example_1_1_2.png used on input line 583.
+Package pdftex.def Info: imgs/vr_example_1_1_2.png used on input line 582.
 (pdftex.def)             Requested size: 112.74377pt x 112.73412pt.
 
 <imgs/vr_example_1_2_2.png, id=211, 722.7pt x 722.7pt>
 File: imgs/vr_example_1_2_2.png Graphic file (type png)
 
 <use imgs/vr_example_1_2_2.png>
-Package pdftex.def Info: imgs/vr_example_1_2_2.png used on input line 590.
+Package pdftex.def Info: imgs/vr_example_1_2_2.png used on input line 589.
 (pdftex.def)             Requested size: 112.74377pt x 112.73412pt.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+C'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 618.
+(hyperref)                removing `\textasciicaron' on input line 617.
 
 ) (./chapters/chapter3.tex [9 <./imgs/vr_example_1_0_6.png> <./imgs/vr_example_
 1_0_8.png> <./imgs/vr_example_1_1_2.png> <./imgs/vr_example_1_2_2.png>]
@@ -1029,7 +1029,7 @@ texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/cm-super/sfsl1000.pfb></usr/local/texlive/2016/texm
 f-dist/fonts/type1/public/cm-super/sfti0700.pfb></usr/local/texlive/2016/texmf-
 dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on tfm.pdf (15 pages, 595013 bytes).
+Output written on tfm.pdf (15 pages, 608075 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  281 compressed objects within 3 object streams
