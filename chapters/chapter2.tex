@@ -1,7 +1,7 @@
 
 \chapter{Canonical form}
 
-\input{chapters/conventions.tex}
+%\input{chapters/conventions.tex}
 
 \section{Ordered complex and canonical form}
 
@@ -28,7 +28,7 @@ $$
 \end{definition}
 
 As we well see, there are a lot of natural circumstances on which a filtration might arise. For example, 
-the singular chain comples of a CW-complex is naturally filtered by its skeleton.
+the singular chain comples of a CW-complex are naturally filtered by its skeleton.
 
 There are more structures we can put on a complex:
 
@@ -118,6 +118,53 @@ Furthermore, the canonical form is unique.
 %
 %\end{definition}
 
+Canonical form allows us to classify graded differential complexes.
+In particular, by will say two complexes are equivalent if
+there is a bijective chain map
+preserving the filtration between the two complexes.
+More precisely:
+
+\begin{definition}[Equivalent complexes]
+Let $C$ and $D$ be two filtered complex as such:
+
+\begin{align*}
+\{0\}
+&\subset
+F_{\leq r_0}C_k
+\subset
+F_{\leq r_k}C_k
+\subset
+\cdots
+\subset
+F_{\leq r_n}C_k
+=
+C_k
+\\
+\{0\}
+&\subset
+F_{\leq r_0}D_k
+\subset
+F_{\leq r_k}D_k
+\subset
+\cdots
+\subset
+F_{\leq r_n}D_k
+=
+D_k
+\end{align*}
+
+Then we say that they are equivalent if and only if
+there is chain map $f:C \to D$ so that
+$$
+f\left(
+F_{\leq r_k}C_k
+\right)
+\subset
+F_{\leq r_k}D_k, \quad\forall k,r_k
+$$
+
+\end{definition}
+
 \begin{corollary}
 Two filtered complexes are equivalent
 \ifff they have the same canonical form.
@@ -136,18 +183,6 @@ Similarly, the birth and death pairs splits into 2 dimensional complexes with on
 
 \end{prof}
 
-\section{Augmented metric spaces}
-
-\begin{definition}
-Let $(X,d)$ be a metric space,
-we say it is augmented if it comes equiped with a function 
-$f:X\to\mathbb{R}$.
-
-\end{definition}
-
-We will say that an augmented metric space is injective if $f$ is.
-
-We will be interested in the case where $X$ is finite.
 
 \section{Persistence complexes}
 
@@ -629,15 +664,17 @@ However, there is a natural relation between these two complexes:
 \begin{proposition}
 The {\Cech} complex is always a subcomplex of the Rips complex. 
 We also have a partial converse:
-$VR_\varepsilon(X)$ is a subcomplex of $\tilde C_\frac{\varepsilon}{2}(X)$
+$VR_{\varepsilon/2}(X)$ is a subcomplex of $\tilde C_{\varepsilon}(X)$
 
 More precisely:
 $$
-\tilde C_\varepsilon(X)
+\tilde C_{\varepsilon/2}(X)
 \hookrightarrow
-VR_\varepsilon(X)
+VR_{\varepsilon/2}(X)
 \hookrightarrow
-\tilde C_\frac{\varepsilon}{2}(X)
+\tilde C_{\varepsilon}(X)
+\hookrightarrow
+VR_{\varepsilon}(X)
 $$
 \end{proposition}
 
@@ -685,5 +722,15 @@ algorithmic way to bring a complex into canonical form,
 we now expose how this methods works with an example. 
 The general case should be clear afterwards.
 
+\section{Augmented metric spaces}
 
+\begin{definition}
+Let $(X,d)$ be a metric space,
+we say it is augmented if it comes equiped with a function 
+$f:X\to\mathbb{R}$.
+
+\end{definition}
+
+We will say that an augmented metric space is injective if $f$ is.
+And we will be interested in the case where $X$ is finite.
 
