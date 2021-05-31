@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {2}Canonical form}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Ordered complex and canonical form}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Persistence complexes}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Representations of the persistent complexes}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Representations of the persistence complexes}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Some important examples of persistent complexes}{10}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Comparison of the {\v {C}ech} and Vietoris-Rips complex}{11}{section.2.3}
 \contentsline {section}{\numberline {2.4}Motivation}{11}{section.2.4}
