@@ -157,14 +157,36 @@ $$
 
 
 \begin{theorem}[Morse inequalities]
-Let $M$ be a compact manifold, and $b_i$ it's betti numbers.
+\label{morseineq}
+Let $M^n$ be a compact manifold, and $b_i$ it's betti numbers.
 Let $f$ be a Morse function on $M$. And let $\lambda_k$ be the 
-number of $k$-index critical points of $f$. Then we have that:
+number of $k$-index critical points of $f$. Then we have that the 
+so called weak Morse inequality holds:
 
 $$
 \lambda_i\geq b_i,\quad
 \forall i\in\mathbb{N}
 $$
+
+As well as the so called strong Morse inequality:
+
+$$
+\sum_{i=0}^{j}(-1)^i\lambda_i
+\geq 
+\sum_{i=0}^{j}(-1)^ib_i,\quad
+0\leq j\leq n
+$$
+
+In the particular where $i=n(=dim(M))$ we have equality:
+
+$$
+\mathcal{X}(M)=
+\sum_{i=0}^{n}(-1)^i\lambda_i
+=
+\sum_{i=0}^{n}(-1)^ib_i
+$$
+
+Where $\mathcal{X}(M)$ is the Euler-Poincaré characteristic.
 
 \end{theorem}
 
@@ -239,4 +261,123 @@ $$
 Where $n(a,b)$ is the number of trajectories flowing from $a$
 to $b$ through the gradient flow. This number is finite, and
 we have that $\partial^2=0$.
+
+\section{Discrete Morse Theory}
+
+We can consider Morse theory on simplicial complexes or simplicial sets,
+ in this case,
+instead of having critical points we have critical faces instead of critical points.
+
+This idea is as was previously, we consider the growing sets $f^{-1}(\infty,t]$
+and we observe for which values of $t$ the type of homotopy changes.
+
+\begin{definition}[Discrete Morse functions]
+
+Let $\mathcal{K}$ be a simplicial complex.
+
+Then we denote $\alpha_i^{(p)}\in\mathcal{K}$ a $p$-dimensional face of
+$\mathcal{K}$ and we denote $\beta<\alpha$ is $\beta$ is subface of $\alpha$.
+
+Then we say that $f:\mathcal{K}\to\mathbb{R}$ is that a discrete Morse function
+if and only if $f$ assigns higher values to higher dimensional simplices with few exceptions. Formally, if $f$ satifies both of the following definitions:
+
+$$
+\begin{cases}
+\#\{
+\beta^{(p+1)}>\alpha\vert
+f(\beta)\leq f(\alpha)
+\}&\leq 1
+\\
+\#\{
+\gamma^{(p-1)}<\alpha\vert
+f(\gamma)\geq f(\alpha)
+\}
+&
+\leq 1
+\end{cases}
+$$
+
+
+Finally, we say that $\alpha^{(p)}\in\mathcal{K}$ is a critical simplex if and only if:
+
+$$
+\begin{cases}
+\#\{
+\beta^{(p+1)}>\alpha\vert
+f(\beta)\leq f(\alpha)
+\}&=0
+\\
+\#\{
+\gamma^{(p-1)}<\alpha\vert
+f(\gamma)\geq f(\alpha)
+\}
+&
+=0
+\end{cases}
+$$
+
+\end{definition}
+
+In general, we will have that always one of the above sets will be empty, that is:
+
+\begin{lemma}
+Let $\mathcal{K}$ be a simplicial complex, and let
+$\alpha^{(p)}\in\mathcal{K}$ be a non-critical compolex, then either
+$$
+\#\{
+\beta^{(p+1)}>\alpha\vert
+f(\beta)\leq f(\alpha)
+\}=0
+$$
+or 
+$$
+\#\{
+\gamma^{(p-1)}<\alpha\vert
+f(\gamma)\geq f(\alpha)
+\}
+=0
+$$
+
+\end{lemma}
+
+And we have a similar result as in the smooth case,
+that is the discrete Morse function describes the homotopy type of the complex:
+
+\begin{theorem}
+Let $\mathcal{K}$ be a simplicial complex and $f$ a discrete Morse function on it.
+Then $\mathcal{K}$ is homotopy equivalent to another simplicial complex which has exactly one complex for every critical complex of $\mathcal{K}$.
+\end{theorem}
+
+Another important similarity with the smooth case is that the standart Morse inequalities hold:
+
+\begin{theorem}[Morse inequalities]
+Let $\mathcal{K}$ be a simplicial complex, and $b_i$ it's betti numbers.
+Let $f$ be a Morse function on $M$. And let $\lambda_k$ be the 
+number of $k$-dimensional critical simplices. 
+Then everything holds exactly as in theorem \ref{morseineq}.
+
+In particular, all of the following holds:
+
+$$
+\lambda_i\geq b_i,\quad
+\forall i\in\mathbb{N}
+$$
+
+$$
+\sum_{i=0}^{j}(-1)^i\lambda_i
+\geq 
+\sum_{i=0}^{j}(-1)^ib_i,\quad
+0\leq j\leq n
+$$
+
+$$
+\mathcal{X}(M)=
+\sum_{i=0}^{n}(-1)^i\lambda_i
+=
+\sum_{i=0}^{n}(-1)^ib_i
+$$
+
+Where in this case n is the dimension of $\mathcal{K}$,
+which is the maximum dimension of the simplices of $\mathcal{K}$.
+\end{theorem}
 
