@@ -9,8 +9,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Representations of the persistence complexes}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Some important examples of persistent complexes}{10}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Comparison of the {\v {C}ech} and Vietoris-Rips complex}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}Motivation}{11}{section.2.4}
-\contentsline {section}{\numberline {2.5}Example of canonical form}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Augmented metric spaces}{12}{section.2.6}
-\contentsline {chapter}{\numberline {3}Morse functions on point clouds}{13}{chapter.3}
+\contentsline {section}{\numberline {2.4}Motivation}{12}{section.2.4}
+\contentsline {section}{\numberline {2.5}Example of canonical form}{12}{section.2.5}
+\contentsline {chapter}{\numberline {3}Elder-rule Staircodes}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Augmented metric spaces}{13}{section.3.1}
 \contentsline {chapter}{\numberline {4}Morse functions on point clouds}{15}{chapter.4}

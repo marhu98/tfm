@@ -30,6 +30,16 @@ $$
 As we well see, there are a lot of natural circumstances on which a filtration might arise. For example, 
 the singular chain comples of a CW-complex are naturally filtered by its skeleton.
 
+
+In general, we may filter a complex by any partial ordered set, $\mathbb{P}$,
+by simply requiring $F_{\leq r_0}C_k\subset F_{\leq r_1}C_k$
+for any $r_0\leq r_1\in\mathbb{P}$. 
+
+One example for this might be the following: Suppose that we have a complex
+that has two different $\mathbb{R}$-filtrations, then we can combine them into a single 
+$\R^2$-filtration.
+
+
 There are more structures we can put on a complex:
 
 
@@ -425,8 +435,7 @@ And we have that it's persistence barcode would be:
 Notice that the barcode gives the an obvious idea of
 what the interval decomposition is.
 
-
-
+We will explore further representations in chapter \ref{erchapter}.
 
 
 \subsection{Some important examples of persistent complexes}
@@ -725,15 +734,4 @@ algorithmic way to bring a complex into canonical form,
 we now expose how this methods works with an example. 
 The general case should be clear afterwards.
 
-\section{Augmented metric spaces}
-
-\begin{definition}
-Let $(X,d)$ be a metric space,
-we say it is augmented if it comes equiped with a function 
-$f:X\to\mathbb{R}$.
-
-\end{definition}
-
-We will say that an augmented metric space is injective if $f$ is.
-And we will be interested in the case where $X$ is finite.
 
