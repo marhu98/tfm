@@ -1,13 +1,17 @@
 \chapter{Morse functions on point clouds}
 
-We now focus on discrete augmented metric spaces.
+In this chapter we introduce a quite succesful technique introduced by: 
+F. Cazals, A.Roth, C. Robert, M. Christian
+in \cite{caz2013}.
+
+This technique focuses on discrete augmented metric spaces.
 In particular, suppose we have a compact smooth manifold
 $M$ equipped with a Morse function $f:M\to \mathbb{R}$.
 
 From this manifold $M$ we sample a finite amount of points 
 $X=\{x_i\}_{i=0}^n$ and we record the value of $f$ on $X$.
 
-We investigate what sort of topological information we can recover from this
+As usual, we investigate what sort of topological information we can recover from this
 discrete sample.
 
 The first thing we would like to do is recover the gradient of the function.
@@ -37,7 +41,7 @@ of maximum growth of $f$.
 
 \begin{example}
 For example, let's consider the following graph, where we denote the
-value of $f$ by $x_i:f(x_i)$:
+value of $f$ in $x_i$ by $:f(x_i)$:
 
 %\begin{center}
 %\includegraphics[height=3cm]{nng1.png}
@@ -83,7 +87,7 @@ value of $f$ by $x_i:f(x_i)$:
 
 Then $\omega^-(x_1)=x_4$. So $\omega$ maps 
 to local minimums, but not necessarily to absolute ones,
-even when restricting to the same component. 
+even when restricting to the same connected component. 
 
 
 \end{example}
