@@ -12,7 +12,7 @@ The function $d_X$ need not be the euclidean distance, it could be the diffusion
 induced by a graph and $f$ need not be the standard height function. We could also take it to be,
 for example, the discrete Ricci curvature.
 
-\section{Augmented metric spaces}
+\section{Staircodes}
 
 
 
@@ -20,9 +20,10 @@ We define the $\epsilon$-Vietories-Rips complex, $VR^\sigma_\epsilon(X)$ as we d
 
 By taking a line $\mathcal{L}$ with strictly positive slope:
 $\mathcal{L}:{ax+b,a>0}$ we can reduced the bifiltration of $VR^\sigma_\epsilon(X)$ to a single filtrated complex
-by setting $F_\delta(X)=VR_\delta^{a\delta+b}(X)$
+by setting $F_\delta(X)=VR_\delta^{a\delta+b}(X)$.
 
 We call the barcode of this complex, $F_\delta(X)$, the k-th fibered complexk-th fibered complex barcode.
+And we shall denote it by $M\vert_L$.
 
 We will need another definition:
 
@@ -32,6 +33,41 @@ We will need another definition:
 
 
     We define $[x]_\sigma^\epsilon$ to be 
-    the points of $X_\simga$ that can be reached by an $\epsilon$-chain
+    the points of $X_\sigma$ that can be reached by an $\epsilon$-chain
     starting from $x$.
+    
+    Furthermore, we say that $x$ is older than $y$ if and only if
+    $f(x)\leq f(x+)$. Clearly, this is an order relationship.
+
+    Finally, we call the staircode of $x$ to be:
+    $$
+        I_x=\{
+            \sigma,\epsilon\in\mathbb{R}\vert
+            x\in X_\sigma 
+            \text{ x is the oldest in } X_\sigma
+        \}
+    $$
+    Notice this defintion might not we well defined in the case $f$ is not injective.
+    In the non-injective case we simply choose an order that is compatible with the older-order. 
+
+    The set $\mathcal{I}=\{I_x\}_{x\in X}$ the elder rule staircode,
+    or ER-staircode for short.
 \end{definition}
+
+
+{\color{red} Insert some images here}
+
+When we instersect a line $\mathcal{L}:{ax+b,a>0}$ with each $I_x$ we get a 
+barcode, which turns out coincides with the $0$-homology of the space $X$:
+
+\begin{theorem}\cite{cai2020}
+    Let $M=H_0(VR_\cdot^\cdot(X))$ 
+    and $\mathcal{I}_X$ it's ER-staircode.
+    And let $\mathcal{L}$ be the line defined by:$\mathcal{L}:{ax+b,a>0}$.
+
+    Then the barcodes of $M\vert_L$ are precisely $\{\{
+        L\cap I_x\vert x\in X
+    \}\}$
+
+    Where by te use of $\{\{\}\}$ we mean we count occurences of $L\cap I_x$ with multiplicity.
+\end{theorem}
