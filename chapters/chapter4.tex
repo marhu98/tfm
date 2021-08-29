@@ -8,11 +8,21 @@ This technique focuses on discrete augmented metric spaces.
 In particular, suppose we have a compact smooth manifold
 $M$ equipped with a Morse function $f:M\to \mathbb{R}$.
 
+Usually this Morse function $f$ will be the height function.
+
 From this manifold $M$ we sample a finite amount of points 
 $X=\{x_i\}_{i=0}^n$ and we record the value of $f$ on $X$.
 
 As usual, we investigate what sort of topological information we can recover from this
 discrete sample.
+
+
+The basic idea is the following: Suppose we are in dimension $n$,
+then we iterate $n$ times. On each iteration we build a graph around with vertices in $X$.
+Our hope is that as we build this graph it will be natural to identify the critical points of $f$ as
+well as their indices.
+
+\section{Pseudo-gradient graphs}
 
 The first thing we would like to do is recover the gradient of the function.
 For this purpose we create a graph using $X$ as its base set
@@ -93,4 +103,8 @@ even when restricting to the same connected component.
 \end{example}
 
 
+\section{Brief description of the algorithm}
 
+
+
+\section{Lala}
