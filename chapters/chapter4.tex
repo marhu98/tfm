@@ -119,8 +119,40 @@ $T[0]$ to be the NNG graph of $X$.
 We also set the critical points of index $0$ (that is the minimums) 
 $\sigma_0^k$ to be the image under $\omega^-$
 of $T[0]$.
+We will need one final definition:
 
-    From now on $k$ is the iteration count.
+\begin{definition}[Bifurcating lower link]
+    Let $X$ be a finite set with a Morse function $f$, and $G$ a graph on $X$.
+    Given $x\in X$, we call lower link of $x$ and denote $L^-\vert_G$ to the 
+    set:
+    $$
+        \{y\in X: \{x,y\} \text{ is and edge of } G \text{ and } f(y)\leq f(x)\}
+    $$
+    
+    We call the bifurcating lower link of $x$ and denote $L^{-\rightsquigarrow}\vert_G$
+\end{definition}
+
+
+Now we described how the algorithm wokrs:
+As mentioned before, if $n$ is the dimension of $M$,
+we iterate $n$ times. 
+From now on $k$ is the iteration count.
+
+At the beginning of iteration $k$ we may assume 
+that the following are known:
+
+\begin{itemize}
+    \item The critical points of index $k-1$.
+
+    \item The global thickening of order $k-1$: $T[k-1]$.
+
+    \item The set $T[k-1]$ has been sorted by increasing value of the function $f$.
+\end{itemize}
+
+On each iteration we do the following:
+
+
+
 \begin{itemize}
 
     \item {\bf Step 1}
@@ -159,11 +191,25 @@ of $T[0]$.
     \item {\bf Step 2}
         In this step we use the bifurcating samples to enlarge $T[k-1]$
 
-        \begin{definition}[Anchor]
-            We say that a subset is an anchor if...
+        \begin{definition}[Anchor and Hooks]
+            We call a $k$-hook any set of critical points of index $k-1$.
+
+            Given $p\in X$ we call the anchor of $p$ the maximal hook that includes
+            $\omega^-(p)$
+            and
+            $\omega^-(
+                L^{-\rightsquigarrow}(p)
+            )$
         \end{definition}
 
-        We also define $T(A^(k))$ as the set of all elements from $B[k]$ having the same anchor.       
+
+        \begin{definition}[Local thickenings]
+            We define $T(A^{(k)})$ as the set of all elements from $B[k]$ having the same anchor
+            and we call it the local thickening of the anchor $A^{(k)}$.       
+
+
+            The lower boundary of $T(A^{(k)})$
+        \end{definition}
 
     \item {\bf Step 3}
         
