@@ -24,7 +24,7 @@ well as their indices.
 
 \section{Pseudo-gradient graphs}
 
-The first thing we would like to do is recover the gradient of the function.
+The first thing we would like to do is recover the gradient of the function $f$.
 For this purpose we create a graph using $X$ as its base set
 and we define a flow on the graph by moving from one point to the point
 connected with it where the morse function $f$ takes the smallest value.
@@ -37,7 +37,9 @@ as the nearest neighbour graph of $X$.
 
 That is the graph where the 
 edges $\{x_i,x_j\}$ are precisely where either $d(x_i,x_j)=d(x_i,X)$
-or $d(x_i,x_j)=d(x_j,X)$. Notice that the binary relation $x_i\sim x_j$ if 
+or $d(x_i,x_j)=d(x_j,X)$. 
+
+Notice that the binary relation $x_i\sim x_j$ if 
 and only if
 $x_j$ is the closest vertex to $x_i$ is not symmetric.
 
@@ -49,6 +51,7 @@ We define $\alpha^-$ in an analogous manner, by following the direction
 of maximum growth of $f$.
 \end{definition}
 
+\label{ex1}
 \begin{example}
 For example, let's consider the following graph, where we denote the
 value of $f$ in $x_i$ by $:f(x_i)$:
@@ -105,6 +108,72 @@ even when restricting to the same connected component.
 
 \section{Brief description of the algorithm}
 
+With this in mind we can describe what the algorithm is. Each
+iteration of the algorithm 
+is separated in 6 steps.
+
+As mentioned at the beginning of the chapter we try to progressively build a 
+graph around some discrete set $X\subset M$. We start by setting
+$T[0]$ to be the NNG graph of $X$.
+
+We also set the critical points of index $0$ (that is the minimums) 
+$\sigma_0^k$ to be the image under $\omega^-$
+of $T[0]$.
+
+    From now on $k$ is the iteration count.
+\begin{itemize}
+
+    \item {\bf Step 1}
+        In the first step we idenitify two important sets:
+        
+        \begin{itemize}
+            \item {\bf Bifurcating samples}: 
+                $
+                B[k]
+                =\{
+                    x\in X: \text{
+                        Vertices of } T[k-1] \text{ so that every two differents elements
+                        from the lower link flow to different critical points
+                    }
+                \}
+                $
+            \item {\bf Confluence samples}: 
+                $
+                B[k]
+                =\{
+                    x\in X: \text{
+                        Vertices of } T[k-1] \text{ so that every element
+                        from the lower link flow to different critical points
+                    }
+                \}
+                $
+
+                Confluence samples usually indicate that we have reduced several flow lines
+                to a single point. That is, confluence samples can be eliminated by increasing the number of samples in a neighbourhood of the confluence
+                sample.
+
+                For example in example \ref{ex1} both $x_1$ and $x_3$ are confluence samples.
+        \end{itemize}
+
+
+    \item {\bf Step 2}
+        In this step we use the bifurcating samples to enlarge $T[k-1]$
+
+        \begin{definition}[Anchor]
+            We say that a subset is an anchor if...
+        \end{definition}
+
+        We also define $T(A^(k))$ as the set of all elements from $B[k]$ having the same anchor.       
+
+    \item {\bf Step 3}
+        
+    \item {\bf Step 4}
+
+    \item {\bf Step 5}
+
+    \item {\bf Step 6}
+
+\end{itemize}
 
 
 \section{Lala}

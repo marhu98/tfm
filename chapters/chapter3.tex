@@ -1,14 +1,37 @@
 \chapter{Elder-rule Staircodes}
 \label{erchapter}
 
+In this chapter we will introduce the so-called Elder-rule staircodes, this
+is technique that will allows to confidently identify $H_0(M)$ combining the information given by 
+a Morse function $f$ and a metric function $d_X$.
+
+Combining $f$ and $d_X$ in a barcode-like summary. Only that in this case we will
+have a bigraduation.
+
+The function $d_X$ need not be the euclidean distance, it could be the diffusion distance
+induced by a graph and $f$ need not be the standard height function. We could also take it to be,
+for example, the discrete Ricci curvature.
+
 \section{Augmented metric spaces}
 
-\begin{definition}
-Let $(X,d)$ be a metric space,
-we say it is augmented if it comes equiped with a function 
-$f:X\to\mathbb{R}$.
 
+
+We define the $\epsilon$-Vietories-Rips complex, $VR^\sigma_\epsilon(X)$ as we did in the previous chapter. 
+
+By taking a line $\mathcal{L}$ with strictly positive slope:
+$\mathcal{L}:{ax+b,a>0}$ we can reduced the bifiltration of $VR^\sigma_\epsilon(X)$ to a single filtrated complex
+by setting $F_\delta(X)=VR_\delta^{a\delta+b}(X)$
+
+We call the barcode of this complex, $F_\delta(X)$, the k-th fibered complexk-th fibered complex barcode.
+
+We will need another definition:
+
+\begin{definition}[$\epsilon$-chain]
+    A sequence $(x_i)_1^l$ is an $\epsilon$-chain if
+    $d(x_i,x_{i+1})\leq \epsilon,\forall 1\leq\epsilon < l$
+
+
+    We define $[x]_\sigma^\epsilon$ to be 
+    the points of $X_\simga$ that can be reached by an $\epsilon$-chain
+    starting from $x$.
 \end{definition}
-
-We will say that an augmented metric space is injective if $f$ is.
-And we will be interested in the case where $X$ is finite.
