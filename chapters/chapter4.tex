@@ -1,5 +1,10 @@
 \chapter{Morse functions on point clouds}
 
+{\color{blue}
+
+TO-DO: It seems that there are some properties about Cazals' algorithm that could be proved 
+but hasn't been done so far.}
+
 In this chapter we introduce a quite succesful technique introduced by: 
 F. Cazals, A.Roth, C. Robert, M. Christian
 in \cite{caz2013}.
@@ -30,6 +35,7 @@ and we define a flow on the graph by moving from one point to the point
 connected with it where the morse function $f$ takes the smallest value.
 
 \begin{definition}[NNG graph]
+    \label{nng}
 
 Given $X$ a discrete set,
 we define $G^-(X)$ it's descending pseudo-gradient graph
@@ -47,8 +53,10 @@ We denote as $\omega^-:G\to G$ the application that
 maps $p\in X$ to the result of iteratively following the point
 with that its joined to $p$ and that minimises the value of $f$.
 
-We define $\alpha^-$ in an analogous manner, by following the direction 
+We define $\alpha^+$ in an analogous manner, by following the direction 
 of maximum growth of $f$.
+
+    We call $\omega^-(p)$ the $\omega$-limit of p. Analogous for $\alpha$-limits.
 \end{definition}
 
 \label{ex1}
@@ -107,6 +115,9 @@ even when restricting to the same connected component.
 
 
 \section{Brief description of the algorithm}
+
+{\color{red}
+Mising examples}
 
 With this in mind we can describe what the algorithm is. Each
 iteration of the algorithm 
@@ -210,20 +221,161 @@ On each iteration we do the following:
 
             The lower boundary of $T(A^{(k)})$
             is defined as the elemenits of $T(A^{(k)})$ that have a lower link lying in $T[k-1]$.
+            We denote the lower boundary by $\partial_l T(A^{(k)})$.
         \end{definition}
 
         Local thickening have an associated thickness:
 
         \begin{definition}[Open local thickening]
+            Let $p\in X$ is called an interior node if every other point connected 
+            to it by $B[k]$ has the same anchor as $p$.
+
+            A local thickening is open if it has no interior node.
         \end{definition}
 
     \item {\bf Step 3}
+        In this step we further split $B[k]$ into flow lines.
+
+        \begin{definition}[Monotonic section]
+           Let $\alpha$ and $\omega$ be respectively a local maximum and minimun of 
+            the discrete flow on $T(A^{(k)})$.
+            Then the monotonic section, denoted $M^{
+            (\alpha,\omega)
+            }
+            T(A^{(k)})$,
+           to be the sub-graph of $T(A^{(k)})$ induced by the vertices whose
+            $\alpha$-limit is $\alpha$ and whose $\omega$-limit is $\omega$.(Recall definition \ref{nng}).
+        \end{definition}
+
+        One important type of monotonic section are linkers:
+
+        \begin{definition}[Linker]
+            A monotonic section $M$, of a local thickening $T$, is called a linker if:
+            If every vertex $p\in M-\partial_l T$ then $p\in C[k]$.
+        \end{definition}
         
+        
+        \begin{definition}[Incidence graph of monotonic sections]
+            We say that two monotonic sections are incident if the
+            union of their vertices in $B[k]$ is connected.
+
+            The are interior incident if they share the same anchor,
+            and exterior otherwise.
+
+            We define the incidence graph as:
+            $$
+                G^k_M=
+                \text{
+                    The unique graph that contains one node per monotonic section which is not a linker,
+                    and two incident monotonic sections are connected by an edge.
+                }
+            $$
+        \end{definition}
+        
+
     \item {\bf Step 4}
 
+        In this step the objecitive is to remove some edges from $G^k_M$. We shall call
+        this refined grap $\overbar G^k_M$.
+        
+        To do this we use three different partial order relation.
+
+        \begin{definition}
+            \begin{itemize}
+                \item $\prec_i$ ($i$ for inclusion):
+                    $$
+                        M_i(A_u^k)\prec_i M_j(A_v^k) \iff
+                        A_u^k\subset A_v^k
+                    $$
+                \item $\prec_h$ ($h$ for height):
+                    $$
+                        M_i(A_u^k)\prec_{h}M_j(A_v^k) \iff
+                        \exists C \text{ monotonic section with extrema } (\alpha_i,\omega_j)
+                        \text{ and }
+                        C \subset T[k-1] \text{ is the graph induced by }
+                        \cup_{t=0}^n V[
+                            M_k(A_t^k)
+                        ]
+                        \text{ where }
+                            (M_k(A_t^k))_{t<n}\in G_M^k 
+                        \text{ is a path between }
+                         M_i(A_u^k)
+                         \text{ and }
+                         M_j(A_v^k)
+                    $$
+                \item $\prec_{ih}$ which is defined in the fashion you would expect:
+                    $$
+                        M_i(A_u^k)\prec_{ih}M_j(A_v^k) \iff
+                        M_i(A_u^k)\prec_{i} M_j(A_v^k) \text{and}
+                        M_i(A_u^k)\prec_{h} M_j(A_v^k)
+                    $$
+
+
+                \item Given $u,v\in G_M^k$ we say $u\vert\vert_i v$ if $u$ and $v$
+                    are not comparable in the order $\prec_i$.
+                    Analogously for $\prec_h$ and $\prec_{ih}$.
+            \end{itemize}
+        \end{definition}
+
+
+        This allows for the classification of the edges $G_M^k$:
+        Let $u,v$ be two edges of $G_M^k$, then the pair $(u,v)$ is:
+
+        \begin{enumerate}
+            \item Canonical if $u\prec_{ih}v$.
+                
+            \item Compoiste if $u\prec_{i}v$ \text{ and } $v\prec_{h}u$.
+
+            \item H-non-I if $u\vert\vert_i v$ \text{ and } $u\prec_{h}v$.
+
+            \item I-non-H if $u\vert\vert_h v$ \text{ and } $u\prec_{i}v$.
+
+            \item Non-hierachical if $u\vert\vert_i v$ \text{ and } $u\vert\vert{h}v$.
+        \end{enumerate}
     \item {\bf Step 5}
+        Finally in this steps we begin to identify some candidates for critical points.
+        The algorithm takes advantage of the fact that critical points whose index differs by $1$ are linked by homogeneous 
+        flow manifold. 
+        And identifies this lines with anchors.
+
+        \begin{definition}[Critical point]
+            {\color{red} Finish writting this}
+            A critical point is a local minimum of a minimal montonic section of the graph 
+            $\overbar G_M^k$.
+            
+            We will define the stable manifold of a critical point $\sigma^k$ to be:
+            $$
+            W^s(\sigma^{k-1})
+            =
+            \{
+                p\in C(B[k])k
+            \}
+            $$
+        \end{definition}
 
     \item {\bf Step 6}
+        In this final step we enlarge $T[k-1]$ to $T[k]$ and get ready for the next iteration.
+        Clearly this step isn't needed in the last iteration.
+        
+        $T[k]$ is defined in the following way:
+
+        \begin{itemize}
+            \item $T[k]$ vertex set:
+                $$
+                V[T[k]]=
+                \cup_j V[M_i(A_j^k)], \text{ with } M_i(A_j^k)\in G_M^k
+                $$
+            \item $T[k]$ edge set:
+                $E[T[k]]=\cup_j E[M_i(A_j^k)]\cup C$, where $C$ is:
+                $$
+                C=\{
+                    e=(u,v)\in T[k-1]\vert
+                    u\in M_i(A_u^k),
+                    v\in M_i(A_v^k),
+                     M_i(A_v^k) \prec_h M_i(A_v^k
+                \}
+                $$
+        \end{itemize}
 
 \end{itemize}
 
@@ -238,6 +390,17 @@ Suppose we had two points in $M$, $p_i,p_j$ and $q$,
 and we have: $W(p,q_i)\cap W(q_j,p)=\{p\}$.
 However, it is not possible that the stable manifold of a critical point be reduced to a
 singleton.
+
+\subsection{An observation about Step 3}
+
+{\color{red} Edit this part}
+\begin{itemize}
+    \item The vertex set of monotonic sections is a covering of th elocal thickening
+        
+    \item  The vertex set of $G_M^k$ is a subset of the set of monotonic sections fiund at k-th iteration.
+
+    \item The edge set of the union of monotonic section is included in the edge set of the local thickening.
+\end{itemize}
 
 
 \section{Lala}

@@ -16,6 +16,7 @@
 \contentsline {chapter}{\numberline {4}Morse functions on point clouds}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Pseudo-gradient graphs}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Brief description of the algorithm}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}Some observations on the algorithm}{17}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}The point of the thickenings}{17}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Lala}{17}{section.4.4}
+\contentsline {section}{\numberline {4.3}Some observations on the algorithm}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}The point of the thickenings}{18}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}An observation about Step 3}{18}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Lala}{18}{section.4.4}
