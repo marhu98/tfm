@@ -143,8 +143,12 @@ We will need one final definition:
     We call the bifurcating lower link of $x$ and denote $L^{-\rightsquigarrow}\vert_G$
 \end{definition}
 
+Now we described how the algorithm works:
 
-Now we described how the algorithm wokrs:
+If it were to be done in practice, before starting we would need to 
+compute the NNG, the pseudo-gradient graph and the local minima and maxima 
+of the psedu-gradient function.
+
 As mentioned before, if $n$ is the dimension of $M$,
 we iterate $n$ times. 
 From now on $k$ is the iteration count.
@@ -306,7 +310,7 @@ On each iteration we do the following:
                 \item $\prec_{ih}$ which is defined in the fashion you would expect:
                     $$
                         M_i(A_u^k)\prec_{ih}M_j(A_v^k) \iff
-                        M_i(A_u^k)\prec_{i} M_j(A_v^k) \text{and}
+                        M_i(A_u^k)\prec_{i} M_j(A_v^k) \text{ and }
                         M_i(A_u^k)\prec_{h} M_j(A_v^k)
                     $$
 
@@ -330,8 +334,17 @@ On each iteration we do the following:
 
             \item I-non-H if $u\vert\vert_h v$ \text{ and } $u\prec_{i}v$.
 
-            \item Non-hierachical if $u\vert\vert_i v$ \text{ and } $u\vert\vert{h}v$.
+            \item Non-hierarchical if $u\vert\vert_i v$ \text{ and } $u\vert\vert{h}v$.
         \end{enumerate}
+
+    {\color{red} Insert examples of edges}
+
+    What does it mean for each edge to fall under one specific category? 
+    {\bf Composite} edges:
+        
+    {\bf H-non-I} edges:
+    {\bf I-non-H} edges:
+    {\bf Non hierarchical} edges:
     \item {\bf Step 5}
         Finally in this steps we begin to identify some candidates for critical points.
         The algorithm takes advantage of the fact that critical points whose index differs by $1$ are linked by homogeneous 
@@ -339,7 +352,7 @@ On each iteration we do the following:
         And identifies this lines with anchors.
 
         \begin{definition}[Critical point]
-            {\color{red} Finish writting this}
+%            {\color{red} Finish writting this}
             A critical point is a local minimum of a minimal montonic section of the graph 
             $\overbar G_M^k$.
             
@@ -348,9 +361,16 @@ On each iteration we do the following:
             W^s(\sigma^{k-1})
             =
             \{
-                p\in C(B[k])k
+                p\in C(B[k])
+                \cup M_l(A^k)\vert_{
+                    \omega^-_\vert{T[k-1]}
+                }
+                (p)
+                =\sigma^{k-1}
             \}
             $$
+            where $M_l(A^k)$ are linkers
+            and $C(B[k])$ is the complementary of $V[T[k-1]]$.
         \end{definition}
 
     \item {\bf Step 6}
@@ -381,6 +401,25 @@ On each iteration we do the following:
 
 \section{Some observations on the algorithm}
 
+To simplify, we give a brief overview of the steps taken by the algorithm:
+
+First we precompute $\omega$ and the NNG, as well
+as the local extrema of $\omega$.
+\begin{enumerate}
+    \item Identify $B[k]$ and $C[k]$ using $T[k-1]$ and $\{\sigma^{k-1}\}$.
+    \item Build an equivalence realtion, and work out it's quotient set: Local thickenings.
+    \item Decompose each local thickening into monotonic section.
+    \begin{itemize}
+        \item Build the graph incidence: $G_M^k$.
+    \end{itemize}
+    \item Filter $G_M^k$ using the relation $\prec_{ih}$.
+    \item Identify the set $\{\sigma^k\}$.
+    \begin{itemize}
+        \item Compute the stable and unstable manifold of the pairs $(\sigma^k,\sigma^{k-1})$  
+    \end{itemize}
+    \item Calculate $T[k]$ so you can keep iterating.
+\end{enumerate}
+
 The algorithm makes some unusual (or maybe original) constructions. In this
 section we explore their raison d'\^etre.
 
@@ -403,4 +442,4 @@ singleton.
 \end{itemize}
 
 
-\section{Lala}
+\section{Comparison with the previous algorithms}
