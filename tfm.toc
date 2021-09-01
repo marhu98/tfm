@@ -21,3 +21,6 @@
 \contentsline {subsection}{\numberline {4.3.2}An observation about Step 3}{19}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Comparison with the previous algorithms}{19}{section.4.4}
 \contentsline {chapter}{\numberline {5}Statistical Inference Using the Morse-Smale Complex}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Mode clustering}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Analysis of mode clustering}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Some remarks}{21}{section.5.3}
