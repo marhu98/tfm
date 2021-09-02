@@ -392,8 +392,28 @@ which is the maximum dimension of the simplices of $\mathcal{K}$.
 
 
 \subsection{Kernel regresssion}
-\begin{definition}[Kernel density estimator]
+\begin{definition}[Kernel functino]
+    \label{skernel}
+    Let $X$ be a probability space, then we say that $K:X\to [0,\infty)$
+    is a density function if:
+    \begin{enumerate}
+        \item $K$ is integrable.
+        \item $\int_\mathbb{R} K = 1$.
+        \item $K(x)=K(-x), \forall x\in\mathbb{R}$.
+    \end{enumerate}
 
+
+It's common to refer to the maxima of kernel regression as their modes.
 \end{definition}
 
-{\color{red} Modes of density functions}
+There are several commonly used kernel functions, we list some of them below:
+\begin{example}
+\end{example}
+    \begin{center}
+    \begin{tabular}{c c}
+        Name & $K(x)$\\\hline
+        Epanechnikov & $\frac{3}{4}(1-x^2)1_{[-1,1]}$\\\hline
+        Gaussian & $\frac{1}{\sqrt{2}} e^{-\frac{1}{2} x^2}$\\\hline
+        Sigmoid & $\frac{2}{\pi}\frac{1}{e^x-e^{-x}}$\\\hline
+    \end{tabular}
+    \end{center}
