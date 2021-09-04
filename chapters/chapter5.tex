@@ -6,7 +6,8 @@ of aproximating the homology of a manifold from a finite
 sample from a stastical point of view. 
 That is what we will try to do in this chapter. It will be based on the findings of the paper: \cite{che2017}.
 
-The main idea is to use the decomposition given in \ref{handle}.
+The main idea is to use a decomposition similar
+to the one given in \ref{handle}.
 
 As in the previous sections we assume we have a closed d-manifold $M^d\subset \mathbb{R}^n$
 and we have a Morse function on it $f:M^d\rightarrow \mathbb{R}$.
@@ -49,6 +50,17 @@ union of stable (unstable) manifolds.
 At least in the compact case.
 \end{remark}
 
+\begin{definition}[$d$-cell]
+    \label{cell}
+    In this chapter we will refer to a $d$-cell to the intersection of a $d$-descending manifold
+    and $0$-ascending manifolds.
+\end{definition}
+
+Note that $k$-descending manifolds for $k<d$ and $l$-ascending manifolds for $l>0$
+have measure $0$. Therefore, $M$ can be decomposed as $M=E_1\cup\cdots E_K\cup N$ where $E_i$ 
+are $d$-cells and $N$ is null set.
+
+We refer to this decomposition as the cell decomposition of $M$.
 \section{Estimating the Morse function}
 Let's take a finite sample from $M$: $\mathcal{X}=\{X_1,\ldots,X_m\}$. 
 If $f$ is a density function we take the sample $\mathcal{X}$ following the distribution associated to $f$ (that is 
@@ -59,25 +71,33 @@ $\hat{f}$ an estimation of $f$.
 
 This is usually done by the following estimation:
 
+\begin{definition}[KDE]
+\label{kde}
+Given $f$ a Morse function of which only $f\vert_\mathcal{X}$ is known, where $\mathcal{X}$ 
+is a finite sample on a Manifold $M$.
+We call the kernel density estimator or KDE and denote $\hat{f}$ to:
 $$
 \hat{f}=
 \frac{1}{mh^d}
 \sum_{i=1}^m
-K(\frac{x-X_i}{h})
+K\left(
+\frac{x-X_i}{h}
+\right)
 $$
+\end{definition}
 
 We could choose $K$ and $h$ in different ways. We just require that $K$ is a smooth kernel function, as we
 described in \ref{skernel} and $h>0$.
-Then we use $\hat{f}$ to build $\nabla\hat{f}$ and compute $\hat\omega^-$.
+Since $\hat{f}$ is clearly $\mathcal{C}^\infty$
+we can consider $\nabla\hat{f}$ and compute $\hat\omega^-$
+accordingly.
 
 
-{\color{red} Add definition of $d$-cell. 
-Not clear in article}
 
 \section{Mode clustering}
 The key point of mode clustering is to use descending $d$-manifolds to partition $M$ into "clusters".
 
-Let $\mathcal{X}$ be a sample as before and let $\{m_1,\ldots,m_l\}$ be the local maxima (or modes) of $\hat{f}$. Then we partition $\mathcal{X}=\coprod\mathcal{X_i}$
+Let $\mathcal{X}$ be a sample as before and let $\{m_1,\ldots,m_l\}$ be the local maxima (or modes) of $\hat{f}$. Then we partition $\mathcal{X}=\coprod\mathcal{X}_i$
 where 
 $$
 \mathcal{X}_i
@@ -92,7 +112,7 @@ $$
 
 \section{Mean Shift Algorithm}
 
-For the next sections we need to estimate the handle decomposition of $M$, this can be done
+For the next sections we need to estimate the cell decomposition of $M$, this can be done
 using the mean shift algorithm or the quick-shift algorithm.
 
 \section{Morse-Smale Regression}
@@ -147,4 +167,30 @@ $$
         Then again we decompose $M$ into $d$-cell using  $\bar m$ as a Morse function:$\hat E_1,\ldots,\hat E_l$
         And we calculate $\hat{m}$ as in the previous point, but changing $E_i$ for $\hat E_i$.
 \end{itemize}
+
+
+\section{Morse-Smale Signatures}
+
+In section \ref{bottle} we say a way to compare two persistence diagrams. In this section we explore a related way to compare
+two finite samples from the manifold $M$:
+Morse-Smale singatures.
+These samples are taken from two different distributions (that is Morse functions).
+
+Suppose we have $X_1,\ldots,X_m$ and $Y_1,\ldots,Y_k$ two samples from $M$.  
+They are respectively distributed according to the pdfs $p_X$ and $p_Y$.
+
+We would like to do the study the folowing statistical test:
+
+$$
+H_0(x):p_X(x)=p_y(x)
+$$
+
+In particuar we are interested when we reject the null hypothesis $H_0$.
+To do this, from each pdf we construct the KDE as described in \label{kde},
+which we denote $\hat p_X$ and $\hat p_y$ respectively.
+
+
+
+Then we consider: $d=\hat p_X - \hat p_Y$.
+
 \section{Some remarks}

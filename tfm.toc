@@ -4,14 +4,17 @@
 \contentsline {subsection}{\numberline {1.1.2}An application of Morse theory}{4}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}The Morse-Smale complex}{5}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Discrete Morse Theory}{5}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Stability of Morse-Smale complexes}{6}{subsection.1.1.5}
 \contentsline {section}{\numberline {1.2}Kernel estimators and density functions}{6}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Kernel regresssion}{6}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Brief review of statistical tests}{6}{section.1.3}
 \contentsline {chapter}{\numberline {2}Canonical form}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Ordered complex and canonical form}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Persistence complexes}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Representations of the persistence complexes}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Some important examples of persistent complexes}{10}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Comparison of the {\v {C}ech} and Vietoris-Rips complex}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.2.2}Comparing persistence complexes}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Some important examples of persistent complexes}{10}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Comparison of the {\v {C}ech} and Vietoris-Rips complex}{12}{section.2.3}
 \contentsline {section}{\numberline {2.4}Motivation}{12}{section.2.4}
 \contentsline {section}{\numberline {2.5}Example of canonical form}{12}{section.2.5}
 \contentsline {chapter}{\numberline {3}Elder-rule Staircodes}{13}{chapter.3}
@@ -29,4 +32,5 @@
 \contentsline {subsection}{\numberline {5.2.1}Analysis of mode clustering}{22}{subsection.5.2.1}
 \contentsline {section}{\numberline {5.3}Mean Shift Algorithm}{22}{section.5.3}
 \contentsline {section}{\numberline {5.4}Morse-Smale Regression}{22}{section.5.4}
-\contentsline {section}{\numberline {5.5}Some remarks}{22}{section.5.5}
+\contentsline {section}{\numberline {5.5}Morse-Smale Signatures}{23}{section.5.5}
+\contentsline {section}{\numberline {5.6}Some remarks}{23}{section.5.6}
