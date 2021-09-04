@@ -1,5 +1,54 @@
 \newcommand{\R}{\mathbb{R}}
 \chapter{Preliminares}
+\section{Reminder of some basic concepts}
+\label{haussdorf}
+
+In the future we will use the Haussdorf distance to compare how different two subsets of $\mathbb{R}^n$ are:
+
+\begin{definition}[Haussdorf distance]
+    Let $A$,$B$ be subsets of $\mathbb{R}^n$. Then the Haussdorf distance between $A$ and $B$,
+    denoted as $Hauss(A,B)$ and is defined as:
+    $$
+        Hauss(A,B)
+        =
+        \inf\{r>0:
+            A\oplus r\subset B
+            \text{ or }
+            B\oplus r\subset A
+        \}
+    $$
+\end{definition}
+Notice this is not an actuall metric (distance), since $d(A,B)=0$ 
+does not imply $A=B$. (Obviously it is a metric if we quotient module
+rigid motions).
+
+We will also need to compare functions:
+
+\begin{definition}
+    \label{fnorm}
+    Let $M$ be a manifold.
+    We define $\norm{f}_\infty$ to be the usual $L_\infty$ form:
+    $$
+        \norm{f}_\infty
+        =\sup\{
+            \vert f(x) \vert : x\in M 
+        \}
+    $$
+    And $\norm{f}_\infty^i$ is defined as:
+    $$
+        \norm{f}_\infty^i
+        =
+        \max\{
+        \norm{f}_\infty
+        ,
+        \norm{
+            \frac{\partial^k f}
+            {\partial x_{i_1}\cdots \partial x_{i_k}}
+            }:1\leq k\leq i
+        \}
+    $$
+\end{definition}
+
 \section{Morse theory: A quick review}
 \input{chapters/conventions.tex}
 
@@ -424,24 +473,6 @@ There are several commonly used kernel functions, we list some of them below:
     \end{center}
 
 
-\section{Haussdorf distance}
-\label{haussdorf}
-
-In the future we will use the Haussdorf distance to compare how different two subsets of $\mathbb{R}^n$ are:
-
-\begin{definition}[Haussdorf distance]
-    Let $A$,$B$ be subsets of $\mathbb{R}^n$. Then the Haussdorf distance between $A$ and $B$,
-    denoted as $Hauss(A,B)$ and is defined as:
-    $$
-        Hauss(A,B)
-        =
-        \inf\{r>0:
-            A\oplus r\subset B
-            \text{ or }
-            B\oplus r\subset A
-        \}
-    $$
-\end{definition}
 
 \section{Brief review of statistical tests}
 

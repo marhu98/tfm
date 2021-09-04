@@ -198,7 +198,7 @@ $$
 \Gamma(\lambda)=
 \{
     x\in M:
-    \vert \hat d \vert > \lambda
+    \vert \hat d(x) \vert > \lambda
 \}
 $$
 
@@ -212,4 +212,21 @@ So $\Gamma(\lambda)$ is the reject manifold.
 One main concern is what happens if we alter slightly the Morse function
 $f$. Fortunately there are some stability results that guarantee that altering the 
 Morse function results in smalls altering in the Morse-Smale complex.
+
+For example:
+
+\begin{theorem}
+    Let $M$ be a closed manifold and $f,g$ be two Morse functions on $M^n$
+    with bounded three derivatives.
+    Let $B$ be the boundary of the $n$-ascending manifolds associated to $f$. 
+    And let $\tilde B$ the ones associated to $g$.
+
+    We recall the defintions of \ref{fnorm}.
+    Then $\exists\epsilon,C>0$ so that:
+    $$
+    \norm{f-g}_\infty^3\leq \epsilon
+    \implies
+    Haus(B,\tilde B)\leq C\norm{f-g}_\infty^1
+    $$
+\end{theorem}
 
